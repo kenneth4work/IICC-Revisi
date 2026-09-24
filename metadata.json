@@ -1,0 +1,8 @@
+{
+  "name": "IPB International Convention Center (IICC) 2",
+  "description": "Where Prestige Meets Purpose. Pusat konvensi & pernikahan bergengsi di jantung Kota Bogor (Botani Square) — pilihan utama kementerian, lembaga pemerintah, dan resepsi megah keluarga terhormat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

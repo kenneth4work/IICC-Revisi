@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPB International Convention Center (IICC) · Where Prestige Meets Purpose</title>
+  <meta name="description" content="Pusat konvensi dan pernikahan prestisius di jantung Kota Bogor (Botani Square Mall Lt.2). Dipercaya lebih dari 3.000 klien sejak 2007." />
+  <meta property="og:title" content="IPB International Convention Center (IICC) · Bogor" />
+  <meta property="og:description" content="Pusat konvensi dan pernikahan prestisius di jantung Kota Bogor. Fasilitas pillar-less ballroom, katering premium, dan terhubung dengan Botani Square & IPB Hotel." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              ivory: '#FAF8F5',
+              canvas: '#F4F1EA',
+              gold: '#B89753',
+              bronze: '#A38139',
+              charcoal: '#1A1E24',
+              forest: '#2C4A3E',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Playfair Display"', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF8F5;
+      color: #1A1E24;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 35s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#FAF8F5] text-stone-900 selection:bg-[#B89753]/20 selection:text-stone-900">
+
+  <!-- ========================================== -->
+  <!-- 1. NAVIGATION BAR -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-stone-200/90 shadow-[0_1px_3px_rgba(0,0,0,0.03)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand -->
+      <a href="#" class="group flex items-center focus:outline-none" aria-label="IPB International Convention Center">
+        <img 
+          src="/iicc-logo.svg" 
+          alt="IPB International Convention Center Logo" 
+          class="h-10 sm:h-12 w-auto max-w-[220px] sm:max-w-none object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+        />
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center space-x-7 lg:space-x-8 text-sm font-medium text-stone-700">
+        <a href="#tentang" class="hover:text-[#B89753] transition-colors hover:underline hover:underline-offset-8">Tentang</a>
+        <a href="#fasilitas" class="hover:text-[#B89753] transition-colors hover:underline hover:underline-offset-8">Fasilitas</a>
+        <a href="#layanan" class="hover:text-[#B89753] transition-colors hover:underline hover:underline-offset-8">Layanan</a>
+        <a href="#klien" class="hover:text-[#B89753] transition-colors hover:underline hover:underline-offset-8">Klien</a>
+        <a href="#galeri" class="hover:text-[#B89753] transition-colors hover:underline hover:underline-offset-8">Galeri</a>
+        <a href="#kontak" class="hover:text-[#B89753] transition-colors hover:underline hover:underline-offset-8">Kontak</a>
+      </nav>
+
+      <!-- CTA Button & Hotline -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="tel:02518400659" class="hidden lg:inline-flex items-center gap-1.5 text-xs text-stone-600 hover:text-stone-900 py-2 px-3 rounded-md transition-colors font-medium">
+          <svg class="w-3.5 h-3.5 text-[#B89753]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span class="tabular-nums">0251 8400 659</span>
+        </a>
+        <a href="#kontak" class="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white bg-[#1A1E24] hover:bg-[#B89753] active:bg-[#A38139] rounded-md transition-all shadow-sm">
+          <span>Konsultasi Gratis</span>
+          <svg class="w-3.5 h-3.5 text-[#B89753]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Button -->
+      <div class="flex md:hidden items-center gap-2">
+        <a href="#kontak" class="px-3 py-1.5 text-xs font-semibold text-white bg-[#1A1E24] hover:bg-[#B89753] rounded">
+          Konsultasi
+        </a>
+        <button id="mobileMenuBtn" class="p-2 text-stone-600 hover:text-stone-900 rounded-md">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-stone-200 px-6 py-4 space-y-3 shadow-lg">
+      <div class="flex flex-col space-y-3 text-sm font-medium">
+        <a href="#tentang" class="mobile-nav-link py-2 text-stone-700 hover:text-[#B89753] border-b border-stone-100">Tentang</a>
+        <a href="#fasilitas" class="mobile-nav-link py-2 text-stone-700 hover:text-[#B89753] border-b border-stone-100">Fasilitas</a>
+        <a href="#layanan" class="mobile-nav-link py-2 text-stone-700 hover:text-[#B89753] border-b border-stone-100">Layanan</a>
+        <a href="#klien" class="mobile-nav-link py-2 text-stone-700 hover:text-[#B89753] border-b border-stone-100">Klien</a>
+        <a href="#galeri" class="mobile-nav-link py-2 text-stone-700 hover:text-[#B89753] border-b border-stone-100">Galeri</a>
+        <a href="#kontak" class="mobile-nav-link py-2 text-stone-700 hover:text-[#B89753]">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- 2. HERO SECTION -->
+  <!-- ========================================== -->
+  <section class="relative min-h-[88vh] lg:min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#FAF8F5] border-b border-stone-200">
+    <!-- Visual Canvas & Photography -->
+    <div class="absolute inset-0 pointer-events-none">
+      <img
+        src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2000&q=85"
+        alt="IPB International Convention Center Grand Ballroom"
+        class="w-full h-full object-cover object-center opacity-10 scale-105"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-[#FAF8F5]/85 to-[#FAF8F5]/60"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(184,151,83,0.12),transparent_75%)]"></div>
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[380px] bg-[#B89753]/10 blur-[140px] rounded-full"></div>
+    </div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-center flex flex-col items-center">
+      <!-- Eyebrow -->
+      <div class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#B89753] mb-6 px-4 py-1.5 rounded-full bg-[#B89753]/10 border border-[#B89753]/25 shadow-sm">
+        <span>IPB International Convention Center</span>
+        <span aria-hidden="true">·</span>
+        <span>Bogor</span>
+      </div>
+
+      <!-- H1 -->
+      <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#1A1E24] mb-6 max-w-4xl text-balance leading-[1.12]">
+        Where Prestige Meets Purpose<span class="text-[#B89753]">.</span>
+      </h1>
+
+      <!-- Sub-headline -->
+      <p class="font-body text-base sm:text-xl text-stone-600 max-w-2xl text-balance font-normal leading-relaxed mb-10">
+        Pusat konvensi & pernikahan bergengsi di jantung Kota Bogor — pilihan utama kementerian, korporasi nasional, dan resepsi megah keluarga terhormat.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-16">
+        <a href="#kontak" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 text-sm font-semibold tracking-wide text-white bg-[#1A1E24] hover:bg-[#B89753] active:bg-[#A38139] rounded-md transition-all shadow-md">
+          <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>💬 Konsultasi Sekarang</span>
+        </a>
+
+        <a href="#fasilitas" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 text-sm font-semibold text-stone-700 hover:text-stone-900 bg-white hover:bg-stone-50 border border-stone-200 rounded-md transition-all shadow-sm">
+          <span>Lihat Fasilitas ↓</span>
+        </a>
+      </div>
+
+      <!-- Proof Strip - Refined & Aesthetic -->
+      <div class="w-full max-w-4xl border-t border-stone-200/80 pt-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5 text-left">
+          <div class="flex items-center gap-3.5 p-3.5 rounded-xl bg-white/80 backdrop-blur-sm border border-stone-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:border-[#B89753]/40 transition-all duration-300">
+            <div class="p-2.5 rounded-lg bg-[#FAF8F5] border border-[#B89753]/25 text-[#B89753] shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <p class="font-display text-sm sm:text-base font-bold text-[#1A1E24] leading-tight">Pengalaman Teruji</p>
+              <p class="text-[11px] text-stone-500 mt-0.5">Holding BLST IPB University</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3.5 p-3.5 rounded-xl bg-white/80 backdrop-blur-sm border border-stone-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:border-[#B89753]/40 transition-all duration-300">
+            <div class="p-2.5 rounded-lg bg-[#FAF8F5] border border-[#B89753]/25 text-[#B89753] shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <div>
+              <p class="font-display text-sm sm:text-base font-bold text-[#1A1E24] leading-tight">Klien Nasional</p>
+              <p class="text-[11px] text-stone-500 mt-0.5">Kementerian, BUMN & Swasta</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3.5 p-3.5 rounded-xl bg-white/80 backdrop-blur-sm border border-stone-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:border-[#B89753]/40 transition-all duration-300">
+            <div class="p-2.5 rounded-lg bg-[#FAF8F5] border border-[#B89753]/25 text-[#B89753] shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <div>
+              <p class="font-display text-sm sm:text-base font-bold text-[#1A1E24] leading-tight">Grand Ballroom</p>
+              <p class="text-[11px] text-stone-500 mt-0.5">Pillar-less High Ceiling</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3.5 p-3.5 rounded-xl bg-white/80 backdrop-blur-sm border border-stone-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:border-[#B89753]/40 transition-all duration-300">
+            <div class="p-2.5 rounded-lg bg-[#FAF8F5] border border-[#B89753]/25 text-[#B89753] shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <p class="font-display text-sm sm:text-base font-bold text-[#1A1E24] leading-tight">Lokasi Strategis</p>
+              <p class="text-[11px] text-stone-500 mt-0.5">Botani Square Mall · Tugu Kujang</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 3. MARQUEE STRIP -->
+  <!-- ========================================== -->
+  <div class="relative w-full overflow-hidden bg-white border-y border-[#B89753]/25 py-3.5 select-none shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+    <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+    <div class="animate-marquee items-center gap-8 whitespace-nowrap">
+      <div class="flex items-center gap-8">
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Grand Ballroom</span><span class="text-[#B89753]">◆</span>
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Wedding Ceremony</span><span class="text-[#B89753]">◆</span>
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Meeting & Konvensi</span><span class="text-[#B89753]">◆</span>
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Exhibition</span><span class="text-[#B89753]">◆</span>
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Katering Premium</span><span class="text-[#B89753]">◆</span>
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Botani Square Lt.2</span><span class="text-[#B89753]">◆</span>
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Bogor</span><span class="text-[#B89753]">◆</span>
+      </div>
+      <div class="flex items-center gap-8">
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Grand Ballroom</span><span class="text-[#B89753]">◆</span>
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Wedding Ceremony</span><span class="text-[#B89753]">◆</span>
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Meeting & Konvensi</span><span class="text-[#B89753]">◆</span>
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Exhibition</span><span class="text-[#B89753]">◆</span>
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Katering Premium</span><span class="text-[#B89753]">◆</span>
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Botani Square Lt.2</span><span class="text-[#B89753]">◆</span>
+        <span class="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">Bogor</span><span class="text-[#B89753]">◆</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 4. TENTANG KAMI (ABOUT) -->
+  <!-- ========================================== -->
+  <section id="tentang" class="py-24 bg-[#FAF8F5] text-stone-900 border-b border-stone-200 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-16">
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#B89753] mb-3">
+          <span>Tentang IICC</span>
+          <span aria-hidden="true">·</span>
+          <span class="text-[#2C4A3E]">Unit Bisnis Strategis BLST IPB</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] mb-4 text-balance">
+          Pusat Konvensi Kelas Dunia di Kota Bogor
+        </h2>
+        <p class="font-display text-lg sm:text-xl text-[#B89753] font-medium italic mb-6">
+          “Mewujudkan panggung bermakna untuk momen paling berarti.”
+        </p>
+        <p class="text-base text-stone-600 leading-relaxed font-body">
+          Sebagai unit bisnis strategis PT Bogor Life Science and Technology (BLST Holding IPB University), IPB International Convention Center (IICC) telah lama menjadi ikon keunggulan penyelenggaraan MICE dan resepsi pernikahan prestisius di Jawa Barat.
+        </p>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+        
+        <!-- Main Landmark Card -->
+        <div class="md:col-span-8 rounded-xl bg-white border border-stone-200 p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300">
+          <div class="absolute inset-0 pointer-events-none">
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+              alt="Botani Square & Bogor Central Landmark"
+              class="w-full h-full object-cover object-center opacity-10 group-hover:scale-105 transition-all duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/80"></div>
+          </div>
+          
+          <div class="relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#B89753]/10 border border-[#B89753]/25 text-xs font-semibold text-[#A38139] mb-6">
+              <span>📍 Lokasi Ikonik Terintegrasi</span>
+            </div>
+            
+            <h3 class="font-display text-2xl sm:text-3xl font-bold text-[#1A1E24] mb-4">
+              Berada di depan Tugu Kujang, Botani Square Mall
+            </h3>
+            
+            <p class="text-stone-600 text-sm sm:text-base leading-relaxed mb-6 font-body">
+              Terletak tepat di episentrum denyut Kota Bogor, IICC terhubung langsung secara indoor dengan <strong class="text-stone-900 font-semibold">IPB Convention Hotel</strong> dan pusat perbelanjaan prestisius <strong class="text-stone-900 font-semibold">Botani Square Mall</strong>. Memiliki akses tercepat dari Gerbang Tol Baranangsiang (Tol Jagorawi) serta terintegrasi langsung dengan shelter Bus Bandara DAMRI.
+            </p>
+          </div>
+
+          <div class="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-stone-100">
+            <div class="p-3 rounded bg-[#FAF8F5] border border-stone-200">
+              <h4 class="text-sm font-semibold text-[#1A1E24]">Hotel Terkoneksi</h4>
+              <p class="text-xs text-stone-500 mt-0.5">Akomodasi delegasi & suite pengantin VVIP</p>
+            </div>
+            <div class="p-3 rounded bg-[#FAF8F5] border border-stone-200">
+              <h4 class="text-sm font-semibold text-[#1A1E24]">Botani Square Mall</h4>
+              <p class="text-xs text-stone-500 mt-0.5">Akses kuliner, perbankan, & retail terpadu</p>
+            </div>
+            <div class="p-3 rounded bg-[#FAF8F5] border border-stone-200">
+              <h4 class="text-sm font-semibold text-[#1A1E24]">Akses Tol Jagorawi</h4>
+              <p class="text-xs text-stone-500 mt-0.5">Langsung dari Exit Gerbang Baranangsiang</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Legacy Badge Card -->
+        <div class="md:col-span-4 rounded-xl bg-gradient-to-br from-white to-[#F4F1EA] border border-[#B89753]/30 p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300">
+          <div class="relative z-10">
+            <span class="text-xs font-semibold tracking-wider uppercase text-[#B89753] block mb-4">
+              Reputasi Teruji
+            </span>
+            <div class="my-4">
+              <div class="text-3xl sm:text-4xl font-display font-bold text-[#1A1E24] tracking-tight">Dedikasi & Prestise</div>
+              <div class="text-base font-semibold text-[#B89753] mt-2">Layanan Berstandar Tinggi</div>
+              <p class="text-xs text-stone-500 mt-1">Holding BLST IPB University</p>
+            </div>
+            <p class="text-sm text-stone-600 leading-relaxed mt-4 font-body">
+              Ribuan acara kenegaraan, wisuda sarjana, simposium saintifik global, serta perayaan janji suci pernikahan telah berlangsung sukses di IICC.
+            </p>
+          </div>
+          <div class="relative z-10 pt-6 border-t border-stone-200 text-xs text-stone-500">
+            Unit Bisnis Resmi BLST (PT Bogor Life Science and Technology - IPB)
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Feature Visual Strip: 3 Integrated Hub Photos -->
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="group relative rounded-xl overflow-hidden border border-stone-200 bg-white h-48 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="IPB Convention Hotel Terintegrasi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/40 to-transparent p-5 flex flex-col justify-end">
+            <span class="text-[11px] font-semibold text-[#B89753] uppercase tracking-wider">Akomodasi Terpadu</span>
+            <p class="text-sm font-bold text-white">IPB Convention Hotel & Suites</p>
+            <p class="text-[11px] text-stone-200">Akses koridor indoor langsung tanpa keluar gedung</p>
+          </div>
+        </div>
+
+        <div class="group relative rounded-xl overflow-hidden border border-stone-200 bg-white h-48 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1567449303078-57ad995bd301?auto=format&fit=crop&w=800&q=80" alt="Botani Square Mall Shopping & Dining" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/40 to-transparent p-5 flex flex-col justify-end">
+            <span class="text-[11px] font-semibold text-[#B89753] uppercase tracking-wider">Pusat Belanja & Kuliner</span>
+            <p class="text-sm font-bold text-white">Botani Square Mall Lt.2</p>
+            <p class="text-[11px] text-stone-200">Ratusan tenant retail, resto premium, & fasilitas perbankan</p>
+          </div>
+        </div>
+
+        <div class="group relative rounded-xl overflow-hidden border border-stone-200 bg-white h-48 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=800&q=80" alt="Lobby & Pre-function Area" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/40 to-transparent p-5 flex flex-col justify-end">
+            <span class="text-[11px] font-semibold text-[#B89753] uppercase tracking-wider">Akses Mobilitas Cepat</span>
+            <p class="text-sm font-bold text-white">Tol Jagorawi & DAMRI Shelter</p>
+            <p class="text-[11px] text-stone-200">0 Menit keluar pintu tol Baranangsiang Bogor</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 5. FASILITAS UNGGULAN (PRODUCTS) -->
+  <!-- ========================================== -->
+  <section id="fasilitas" class="py-24 bg-white text-stone-900 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl mb-14">
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#B89753] mb-3">
+          <span>Venue & Ruang Pertemuan</span>
+          <span aria-hidden="true">·</span>
+          <span class="text-[#2C4A3E]">Kapasitas Fleksibel</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] mb-3">
+          Fasilitas Unggulan IICC
+        </h2>
+        <p class="text-base text-stone-600 font-body leading-relaxed">
+          Dirancang dengan standar akustik premium, tata cahaya adaptif, dan infrastruktur multimedia mutakhir untuk memastikan kesuksesan setiap gelaran acara.
+        </p>
+      </div>
+
+      <!-- 3 Facility Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Grand Ballroom -->
+        <div class="group relative rounded-xl bg-white border border-stone-200 hover:border-[#B89753]/60 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-lg">
+          <div class="relative h-60 bg-stone-900 overflow-hidden border-b border-stone-200 flex flex-col justify-between">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=80" alt="Grand Ballroom IICC" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/50 to-stone-950/30"></div>
+            <div class="relative z-10 p-5 flex items-center justify-between text-xs text-stone-200">
+              <span class="font-mono text-[#F4F1EA] font-semibold bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm">Area Luas · Plafon Tinggi</span>
+              <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-[#B89753] text-stone-950 font-bold">Kapasitas Akbar</span>
+            </div>
+            <div class="relative z-10 p-5 pt-0">
+              <div class="flex items-baseline gap-2">
+                <span class="text-xl sm:text-2xl font-display font-bold text-white">Grand Ballroom</span>
+                <span class="text-xs uppercase tracking-wider text-[#B89753] font-bold bg-black/70 px-2 py-0.5 rounded backdrop-blur-sm">Pillar-less</span>
+              </div>
+              <p class="text-xs text-stone-200 mt-1">Pillar-less Grand Hall tanpa halangan visual</p>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between bg-white">
+            <div>
+              <h3 class="font-display text-2xl font-bold text-[#1A1E24] group-hover:text-[#B89753] transition-colors">Grand Ballroom</h3>
+              <p class="text-xs font-semibold text-[#A38139] mt-1 mb-4">Pillar-less Iconic Hall</p>
+              <p class="text-sm text-stone-600 font-body leading-relaxed mb-6">
+                Ruang megah bebas pilar dengan langit-langit menjulang. Menawarkan bentang pandang menyeluruh tanpa halangan visual untuk wisuda akbar, simposium, dan resepsi kenegaraan.
+              </p>
+              <div class="space-y-2 mb-6 text-xs text-stone-600">
+                <div>• Kapasitas akbar standing reception & format banquet</div>
+                <div>• Sistem audio konser line-array & videowall mutakhir</div>
+                <div>• Akses lift barang terisolasi & ruang rias VVIP privat</div>
+              </div>
+            </div>
+            <div class="pt-5 border-t border-stone-100 flex items-center justify-between">
+              <span class="text-xs text-stone-500">MICE & Wedding Akbar</span>
+              <a href="#kontak" class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold uppercase text-white bg-[#1A1E24] hover:bg-[#B89753] rounded transition-colors" onclick="selectRoom('Grand Ballroom')">
+                <span>Pilih Ruang →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Ballroom Modular -->
+        <div class="group relative rounded-xl bg-white border border-stone-200 hover:border-[#B89753]/60 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-lg">
+          <div class="relative h-60 bg-stone-900 overflow-hidden border-b border-stone-200 flex flex-col justify-between">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80" alt="Ballroom Flexi Configuration" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/50 to-stone-950/30"></div>
+            <div class="relative z-10 p-5 flex items-center justify-between text-xs text-stone-200">
+              <span class="font-mono text-[#F4F1EA] font-semibold bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm">Ruang Modular · Plafon Tinggi</span>
+              <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-[#B89753] text-stone-950 font-bold">Kapasitas Menengah - Besar</span>
+            </div>
+            <div class="relative z-10 p-5 pt-0">
+              <div class="flex items-baseline gap-2">
+                <span class="text-xl sm:text-2xl font-display font-bold text-white">Ballroom Modular</span>
+                <span class="text-xs uppercase tracking-wider text-[#B89753] font-bold bg-black/70 px-2 py-0.5 rounded backdrop-blur-sm">Flexible Setup</span>
+              </div>
+              <p class="text-xs text-stone-200 mt-1">Partisi movable wall kedap suara akustik</p>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between bg-white">
+            <div>
+              <h3 class="font-display text-2xl font-bold text-[#1A1E24] group-hover:text-[#B89753] transition-colors">Ballroom (Modular)</h3>
+              <p class="text-xs font-semibold text-[#A38139] mt-1 mb-4">Pilihan Unit Flexible Configuration</p>
+              <p class="text-sm text-stone-600 font-body leading-relaxed mb-6">
+                Unit ballroom modular dengan partisi kedap suara. Dapat digabungkan atau dipisah secara independen sesuai skala kebutuhan acara seminar atau gala dinner.
+              </p>
+              <div class="space-y-2 mb-6 text-xs text-stone-600">
+                <div>• Kapasitas fleksibel per modul ruangan</div>
+                <div>• Movable acoustic partitions dengan peredam suara tinggi</div>
+                <div>• Sistem proyektor motorized & lighting per zona</div>
+              </div>
+            </div>
+            <div class="pt-5 border-t border-stone-100 flex items-center justify-between">
+              <span class="text-xs text-stone-500">Seminar & Gala Dinner</span>
+              <a href="#kontak" class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold uppercase text-white bg-[#1A1E24] hover:bg-[#B89753] rounded transition-colors" onclick="selectRoom('Ballroom Modular')">
+                <span>Pilih Ruang →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Meeting Room Suites -->
+        <div class="group relative rounded-xl bg-white border border-stone-200 hover:border-[#B89753]/60 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm hover:shadow-lg">
+          <div class="relative h-60 bg-stone-900 overflow-hidden border-b border-stone-200 flex flex-col justify-between">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=80" alt="Meeting Room Suites" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/50 to-stone-950/30"></div>
+            <div class="relative z-10 p-5 flex items-center justify-between text-xs text-stone-200">
+              <span class="font-mono text-[#F4F1EA] font-semibold bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm">Meeting Suites · Ergonomis</span>
+              <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-[#B89753] text-stone-950 font-bold">Kapasitas Intim - Sedang</span>
+            </div>
+            <div class="relative z-10 p-5 pt-0">
+              <div class="flex items-baseline gap-2">
+                <span class="text-xl sm:text-2xl font-display font-bold text-white">Meeting Room Suites</span>
+                <span class="text-xs uppercase tracking-wider text-[#B89753] font-bold bg-black/70 px-2 py-0.5 rounded backdrop-blur-sm">Executive Focus</span>
+              </div>
+              <p class="text-xs text-stone-200 mt-1">Dilengkapi High-Speed WiFi & Smart TV Display</p>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between bg-white">
+            <div>
+              <h3 class="font-display text-2xl font-bold text-[#1A1E24] group-hover:text-[#B89753] transition-colors">Meeting Room Suites</h3>
+              <p class="text-xs font-semibold text-[#A38139] mt-1 mb-4">Ruang Rapat Eksekutif Modern</p>
+              <p class="text-sm text-stone-600 font-body leading-relaxed mb-6">
+                Rangkaian ruang rapat eksklusif dengan koneksi internet serat optik berkecepatan tinggi, tata meja ergonomis, dan privasi paripurna.
+              </p>
+              <div class="space-y-2 mb-6 text-xs text-stone-600">
+                <div>• Kapasitas intim hingga skala menengah (U-shape / Classroom)</div>
+                <div>• Dedicated high-speed WiFi & interactive presentation</div>
+                <div>• Paket coffee break & lunch box eksklusif</div>
+              </div>
+            </div>
+            <div class="pt-5 border-t border-stone-100 flex items-center justify-between">
+              <span class="text-xs text-stone-500">Rapat & Workshop</span>
+              <a href="#kontak" class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold uppercase text-white bg-[#1A1E24] hover:bg-[#B89753] rounded transition-colors" onclick="selectRoom('Meeting Room Suites')">
+                <span>Pilih Ruang →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 6. ONE STOP SOLUTION (LAYANAN) -->
+  <!-- ========================================== -->
+  <section id="layanan" class="py-24 bg-[#FAF8F5] text-stone-900 border-b border-stone-200 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-16">
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#B89753] mb-3">
+          <span>One Stop Solution</span>
+          <span aria-hidden="true">·</span>
+          <span class="text-[#2C4A3E]">Layanan Komprehensif</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] mb-4">
+          Solusi Terpadu Setiap Skala Acara
+        </h2>
+        <p class="text-base text-stone-600 font-body leading-relaxed">
+          Dari rapat kenegaraan bertaraf internasional hingga pesta pernikahan akbar, IICC menghadirkan integrasi venue, katering gourmet, serta manajemen teknis dalam satu atap profesional.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- 01: Meeting & Convention -->
+        <div class="rounded-xl bg-white border border-stone-200 hover:border-[#B89753]/60 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-lg overflow-hidden">
+          <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-stone-900">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Meeting & Convention IICC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-transparent"></div>
+            <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+              <span class="font-display text-lg font-bold text-white bg-[#1A1E24]/90 px-3.5 py-1 rounded-md border border-[#B89753]/40">01</span>
+              <span class="text-xs font-semibold uppercase text-white bg-black/60 px-3 py-1 rounded-full border border-white/20">MICE Ready</span>
+            </div>
+          </div>
+          <div class="p-7 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display text-2xl font-bold text-[#1A1E24] group-hover:text-[#B89753] transition-colors mb-2">Meeting & Convention</h3>
+              <p class="text-xs font-semibold text-[#A38139] mb-4">Standar Protokol Internasional & Simposium</p>
+              <p class="text-sm text-stone-600 font-body leading-relaxed mb-6">
+                Fasilitas lengkap untuk konferensi kementerian, simposium akademik, dan rapat kerja korporasi dengan dukungan tata letak multi-format.
+              </p>
+              <ul class="space-y-2 mb-6 text-xs sm:text-sm text-stone-700">
+                <li>✓ Full board & half day meeting package</li>
+                <li>✓ Tata suara jernih & penerjemah simultan (simultaneous interpretation)</li>
+                <li>✓ Ruang VIP transit & registrasi terpisah</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-stone-100">
+              <a href="#kontak" class="w-full inline-flex items-center justify-between py-3 px-4 text-xs font-semibold uppercase text-stone-800 bg-[#FAF8F5] hover:bg-[#1A1E24] hover:text-white border border-stone-200 rounded-lg transition-all" onclick="selectService('Meeting & Convention')">
+                <span>Konsultasi Paket Meeting & Convention</span>
+                <span class="text-[#B89753]">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02: Wedding & Resepsi -->
+        <div class="rounded-xl bg-white border border-stone-200 hover:border-[#B89753]/60 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-lg overflow-hidden">
+          <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-stone-900">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Wedding & Resepsi IICC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-transparent"></div>
+            <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+              <span class="font-display text-lg font-bold text-white bg-[#1A1E24]/90 px-3.5 py-1 rounded-md border border-[#B89753]/40">02</span>
+              <span class="text-xs font-semibold uppercase text-white bg-black/60 px-3 py-1 rounded-full border border-white/20">Prestigious Nuptial</span>
+            </div>
+          </div>
+          <div class="p-7 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display text-2xl font-bold text-[#1A1E24] group-hover:text-[#B89753] transition-colors mb-2">Wedding & Resepsi</h3>
+              <p class="text-xs font-semibold text-[#A38139] mb-4">Kemegahan Pesta Pernikahan Tak Terlupakan</p>
+              <p class="text-sm text-stone-600 font-body leading-relaxed mb-6">
+                Wujudkan pernikahan impian dalam balutan aula tanpa tiang yang megah, karpet mewah, serta lorong aisle dramatis berlatar pencahayaan elegan.
+              </p>
+              <ul class="space-y-2 mb-6 text-xs sm:text-sm text-stone-700">
+                <li>✓ Pilihan paket wedding lengkap (Adat Tradisional & Modern International)</li>
+                <li>✓ Ruang rias pengantin & keluarga berpendingin privat</li>
+                <li>✓ Complimentary bridal suite di IPB Convention Hotel</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-stone-100">
+              <a href="#kontak" class="w-full inline-flex items-center justify-between py-3 px-4 text-xs font-semibold uppercase text-stone-800 bg-[#FAF8F5] hover:bg-[#1A1E24] hover:text-white border border-stone-200 rounded-lg transition-all" onclick="selectService('Wedding & Resepsi')">
+                <span>Konsultasi Paket Wedding & Resepsi</span>
+                <span class="text-[#B89753]">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03: Katering Premium -->
+        <div class="rounded-xl bg-white border border-stone-200 hover:border-[#B89753]/60 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-lg overflow-hidden">
+          <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-stone-900">
+            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80" alt="Katering Premium IICC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-transparent"></div>
+            <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+              <span class="font-display text-lg font-bold text-white bg-[#1A1E24]/90 px-3.5 py-1 rounded-md border border-[#B89753]/40">03</span>
+              <span class="text-xs font-semibold uppercase text-white bg-black/60 px-3 py-1 rounded-full border border-white/20">Halal & HACCP</span>
+            </div>
+          </div>
+          <div class="p-7 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display text-2xl font-bold text-[#1A1E24] group-hover:text-[#B89753] transition-colors mb-2">Katering Premium</h3>
+              <p class="text-xs font-semibold text-[#A38139] mb-4">Gastronomi Berkelas Chef Berpengalaman</p>
+              <p class="text-sm text-stone-600 font-body leading-relaxed mb-6">
+                Sajian kuliner nusantara dan internasional yang higienis, lezat, serta bersertifikasi Halal dengan dapur produksi in-house berstandar tinggi.
+              </p>
+              <ul class="space-y-2 mb-6 text-xs sm:text-sm text-stone-700">
+                <li>✓ Buffet gourmet, live cooking stall, & fine dining</li>
+                <li>✓ Sertifikasi Halal MUI & kontrol keamanan pangan ketat</li>
+                <li>✓ Menu khusus diet & jamuan VIP kenegaraan</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-stone-100">
+              <a href="#kontak" class="w-full inline-flex items-center justify-between py-3 px-4 text-xs font-semibold uppercase text-stone-800 bg-[#FAF8F5] hover:bg-[#1A1E24] hover:text-white border border-stone-200 rounded-lg transition-all" onclick="selectService('Katering Premium')">
+                <span>Konsultasi Layanan Katering Premium</span>
+                <span class="text-[#B89753]">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04: Exhibition & Pameran -->
+        <div class="rounded-xl bg-white border border-stone-200 hover:border-[#B89753]/60 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-lg overflow-hidden">
+          <div class="relative h-48 sm:h-52 w-full overflow-hidden bg-stone-900">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Exhibition & Pameran IICC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-transparent"></div>
+            <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+              <span class="font-display text-lg font-bold text-white bg-[#1A1E24]/90 px-3.5 py-1 rounded-md border border-[#B89753]/40">04</span>
+              <span class="text-xs font-semibold uppercase text-white bg-black/60 px-3 py-1 rounded-full border border-white/20">Expo Hall</span>
+            </div>
+          </div>
+          <div class="p-7 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display text-2xl font-bold text-[#1A1E24] group-hover:text-[#B89753] transition-colors mb-2">Exhibition & Pameran</h3>
+              <p class="text-xs font-semibold text-[#A38139] mb-4">Lantai Pameran Komersial & Edukasi Luas</p>
+              <p class="text-sm text-stone-600 font-body leading-relaxed mb-6">
+                Daya dukung lantai dan akses logistik memadai untuk pameran pendidikan, bursa kerja, pameran buku, hingga pameran produk teknologi.
+              </p>
+              <ul class="space-y-2 mb-6 text-xs sm:text-sm text-stone-700">
+                <li>✓ Kapasitas hingga 100+ booth pameran standar</li>
+                <li>✓ Jalur loading dock langsung ke lantai konvensi</li>
+                <li>✓ Daya listrik cadangan genset 100% tersinkronisasi</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-stone-100">
+              <a href="#kontak" class="w-full inline-flex items-center justify-between py-3 px-4 text-xs font-semibold uppercase text-stone-800 bg-[#FAF8F5] hover:bg-[#1A1E24] hover:text-white border border-stone-200 rounded-lg transition-all" onclick="selectService('Exhibition & Pameran')">
+                <span>Konsultasi Paket Exhibition & Pameran</span>
+                <span class="text-[#B89753]">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 7. KLIEN TERPERCAYA (CLIENTS) -->
+  <!-- ========================================== -->
+  <section id="klien" class="py-24 bg-[#FAF8F5] text-stone-900 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#B89753] mb-3">
+          <span class="text-[#2C4A3E]">🛡️ Klien Terpercaya</span>
+          <span aria-hidden="true">·</span>
+          <span>Kredibilitas Teruji</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] mb-4 text-balance">
+          Dipercaya Lembaga Negara, BUMN, & Klien Swasta
+        </h2>
+        <p class="text-base text-stone-600 font-body leading-relaxed">
+          Berbagai institusi kementerian, perusahaan multinasional, serta keluarga pengantin telah mempercayakan panggung momen penting mereka kepada IICC.
+        </p>
+      </div>
+
+      <!-- Clients Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-20">
+        
+        <div class="p-5 rounded-xl bg-white border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-mono text-xs font-bold text-[#A38139]">KEMENKEU</span>
+            <span class="text-[#2C4A3E]">✓</span>
+          </div>
+          <div>
+            <h3 class="font-display text-sm sm:text-base font-semibold text-[#1A1E24]">Kementerian Keuangan RI</h3>
+            <p class="text-[11px] text-stone-500 mt-1">Lembaga Pemerintah RI</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl bg-white border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-mono text-xs font-bold text-[#A38139]">PERTAMINA</span>
+            <span class="text-[#2C4A3E]">✓</span>
+          </div>
+          <div>
+            <h3 class="font-display text-sm sm:text-base font-semibold text-[#1A1E24]">Pertamina</h3>
+            <p class="text-[11px] text-stone-500 mt-1">Badan Usaha Milik Negara (BUMN)</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl bg-white border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-mono text-xs font-bold text-[#A38139]">KKP</span>
+            <span class="text-[#2C4A3E]">✓</span>
+          </div>
+          <div>
+            <h3 class="font-display text-sm sm:text-base font-semibold text-[#1A1E24]">Kementerian Kelautan & Perikanan</h3>
+            <p class="text-[11px] text-stone-500 mt-1">Lembaga Pemerintah RI</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl bg-white border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-mono text-xs font-bold text-[#A38139]">BAPPENAS</span>
+            <span class="text-[#2C4A3E]">✓</span>
+          </div>
+          <div>
+            <h3 class="font-display text-sm sm:text-base font-semibold text-[#1A1E24]">Bappenas</h3>
+            <p class="text-[11px] text-stone-500 mt-1">Badan Perencanaan Pembangunan Nasional</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl bg-white border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-mono text-xs font-bold text-[#A38139]">KEMENHUT</span>
+            <span class="text-[#2C4A3E]">✓</span>
+          </div>
+          <div>
+            <h3 class="font-display text-sm sm:text-base font-semibold text-[#1A1E24]">Kementerian Kehutanan RI</h3>
+            <p class="text-[11px] text-stone-500 mt-1">Lembaga Pemerintah RI</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl bg-white border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-mono text-xs font-bold text-[#A38139]">KEMENKES</span>
+            <span class="text-[#2C4A3E]">✓</span>
+          </div>
+          <div>
+            <h3 class="font-display text-sm sm:text-base font-semibold text-[#1A1E24]">Kementerian Kesehatan RI</h3>
+            <p class="text-[11px] text-stone-500 mt-1">Lembaga Pemerintah RI</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl bg-white border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-mono text-xs font-bold text-[#A38139]">KOTA BOGOR</span>
+            <span class="text-[#2C4A3E]">✓</span>
+          </div>
+          <div>
+            <h3 class="font-display text-sm sm:text-base font-semibold text-[#1A1E24]">Pemerintah Kota Bogor</h3>
+            <p class="text-[11px] text-stone-500 mt-1">Pemerintah Daerah</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-xl bg-gradient-to-br from-[#FAF8F5] to-[#F4F1EA] border border-[#B89753]/30 flex flex-col justify-center text-center shadow-sm">
+          <span class="font-display text-xl sm:text-2xl font-bold text-[#A38139]">Mitra Terpercaya</span>
+          <p class="text-xs text-stone-800 font-semibold mt-1">Klien & Acara Sukses</p>
+          <p class="text-[10px] text-stone-500 mt-0.5">MICE, Simposium & Wedding</p>
+        </div>
+
+      </div>
+
+      <!-- Testimonial Spotlight -->
+      <div class="max-w-4xl mx-auto rounded-2xl bg-white border border-stone-200 p-8 sm:p-12 relative overflow-hidden shadow-sm">
+        <div class="relative z-10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-xs uppercase tracking-widest text-[#B89753] font-semibold">
+              Bukti Pengalaman Klien (Konferensi Tingkat Nasional)
+            </span>
+            <span class="px-2.5 py-0.5 rounded bg-[#2C4A3E]/10 border border-[#2C4A3E]/20 text-[10px] text-[#2C4A3E] font-medium">
+              Verified Event
+            </span>
+          </div>
+
+          <blockquote class="font-display text-lg sm:text-2xl font-medium text-[#1A1E24] leading-relaxed italic mb-8">
+            “Penyelenggaraan simposium nasional kami di Grand Ballroom IICC berjalan sangat profesional. Tata suara tanpa gaung, integrasi dengan Hotel IPB di sebelah ruang pertemuan sangat memudahkan transit delegasi dan narasumber VVIP kementerian.”
+          </blockquote>
+
+          <div class="flex items-center gap-3.5 pt-6 border-t border-stone-100">
+            <div class="w-11 h-11 rounded-full bg-[#B89753]/15 border border-[#B89753]/30 flex items-center justify-center font-display font-bold text-[#A38139] text-sm shrink-0">
+              DR
+            </div>
+            <div>
+              <p class="font-semibold text-[#1A1E24] text-base">Dr. R. Hidayat</p>
+              <p class="text-xs text-stone-500 mt-0.5">Ketua Komite Simposium · <span class="text-[#B89753] font-medium">Kementerian Kelautan & Perikanan</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 8. GALERI DOKUMENTASI (GALLERY) -->
+  <!-- ========================================== -->
+  <section id="galeri" class="py-24 bg-white text-stone-900 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl mb-14">
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#B89753] mb-3">
+          <span>Dokumentasi Acara</span>
+          <span aria-hidden="true">·</span>
+          <span class="text-[#2C4A3E]">Portfolio Momen Megah</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] mb-3">
+          Galeri Acara & Kemegahan Ruang
+        </h2>
+        <p class="text-base text-stone-600 font-body leading-relaxed">
+          Jelajahi visualisasi tata letak panggung, kemewahan resepsi pernikahan, dan kesiapan fasilitas MICE kelas dunia di IICC Bogor.
+        </p>
+      </div>
+
+      <!-- Gallery Grid with Photography -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="group relative rounded-xl bg-white border border-stone-200 overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="relative h-64 w-full overflow-hidden bg-stone-900">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Simposium Nasional Grand Ballroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/40 to-stone-950/20"></div>
+            <div class="relative z-10 p-5 flex items-center justify-between text-xs">
+              <span class="font-semibold text-white uppercase text-[11px] bg-black/60 px-2.5 py-1 rounded">Grand Ballroom</span>
+            </div>
+            <div class="relative z-10 p-5 pt-0">
+              <span class="text-[11px] font-mono text-[#F4F1EA] bg-black/60 px-2 py-0.5 rounded">1.500 Kursi Theater</span>
+              <h3 class="font-display text-lg font-bold text-white mt-1">Simposium Nasional & Konvensi</h3>
+            </div>
+          </div>
+          <div class="p-4 bg-white border-t border-stone-100 flex items-center justify-between text-xs text-stone-600">
+            <span>Tata letak konvensi skala 1.500 delegasi</span>
+            <span class="text-[#A38139] font-medium">Lihat Detail →</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-xl bg-white border border-stone-200 overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="relative h-64 w-full overflow-hidden bg-stone-900">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Royal Wedding Resepsi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/40 to-stone-950/20"></div>
+            <div class="relative z-10 p-5 flex items-center justify-between text-xs">
+              <span class="font-semibold text-white uppercase text-[11px] bg-black/60 px-2.5 py-1 rounded">Grand Ballroom</span>
+            </div>
+            <div class="relative z-10 p-5 pt-0">
+              <span class="text-[11px] font-mono text-[#F4F1EA] bg-black/60 px-2 py-0.5 rounded">1.200 Undangan</span>
+              <h3 class="font-display text-lg font-bold text-white mt-1">Royal Wedding & Gala Resepsi</h3>
+            </div>
+          </div>
+          <div class="p-4 bg-white border-t border-stone-100 flex items-center justify-between text-xs text-stone-600">
+            <span>Pernikahan mewah berbalut dekorasi flora</span>
+            <span class="text-[#A38139] font-medium">Lihat Detail →</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-xl bg-white border border-stone-200 overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="relative h-64 w-full overflow-hidden bg-stone-900">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Executive Boardroom Meeting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/40 to-stone-950/20"></div>
+            <div class="relative z-10 p-5 flex items-center justify-between text-xs">
+              <span class="font-semibold text-white uppercase text-[11px] bg-black/60 px-2.5 py-1 rounded">Meeting Suite</span>
+            </div>
+            <div class="relative z-10 p-5 pt-0">
+              <span class="text-[11px] font-mono text-[#F4F1EA] bg-black/60 px-2 py-0.5 rounded">45 Peserta U-Shape</span>
+              <h3 class="font-display text-lg font-bold text-white mt-1">Executive Boardroom Salak Room</h3>
+            </div>
+          </div>
+          <div class="p-4 bg-white border-t border-stone-100 flex items-center justify-between text-xs text-stone-600">
+            <span>Rapat tertutup dengan sistem telekonferensi</span>
+            <span class="text-[#A38139] font-medium">Lihat Detail →</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-xl bg-white border border-stone-200 overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="relative h-64 w-full overflow-hidden bg-stone-900">
+            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80" alt="Gala Dinner & Perjamuan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/40 to-stone-950/20"></div>
+            <div class="relative z-10 p-5 flex items-center justify-between text-xs">
+              <span class="font-semibold text-white uppercase text-[11px] bg-black/60 px-2.5 py-1 rounded">Ballroom 1 & 2</span>
+            </div>
+            <div class="relative z-10 p-5 pt-0">
+              <span class="text-[11px] font-mono text-[#F4F1EA] bg-black/60 px-2 py-0.5 rounded">600 Tamu Round Table</span>
+              <h3 class="font-display text-lg font-bold text-white mt-1">Gala Banquet & Perjamuan Resmi</h3>
+            </div>
+          </div>
+          <div class="p-4 bg-white border-t border-stone-100 flex items-center justify-between text-xs text-stone-600">
+            <span>Setup 60 meja bundar perjamuan diplomatik</span>
+            <span class="text-[#A38139] font-medium">Lihat Detail →</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-xl bg-white border border-stone-200 overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="relative h-64 w-full overflow-hidden bg-stone-900">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Expo & Exhibition Hall" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/40 to-stone-950/20"></div>
+            <div class="relative z-10 p-5 flex items-center justify-between text-xs">
+              <span class="font-semibold text-white uppercase text-[11px] bg-black/60 px-2.5 py-1 rounded">Full Hall Expo</span>
+            </div>
+            <div class="relative z-10 p-5 pt-0">
+              <span class="text-[11px] font-mono text-[#F4F1EA] bg-black/60 px-2 py-0.5 rounded">80 Booth Pameran</span>
+              <h3 class="font-display text-lg font-bold text-white mt-1">Bogor Education & Career Expo</h3>
+            </div>
+          </div>
+          <div class="p-4 bg-white border-t border-stone-100 flex items-center justify-between text-xs text-stone-600">
+            <span>Pameran edukasi dengan sirkulasi pengunjung luas</span>
+            <span class="text-[#A38139] font-medium">Lihat Detail →</span>
+          </div>
+        </div>
+
+        <div class="group relative rounded-xl bg-white border border-stone-200 overflow-hidden shadow-sm hover:shadow-lg transition-all">
+          <div class="relative h-64 w-full overflow-hidden bg-stone-900">
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Intimate Wedding Ceremony" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/40 to-stone-950/20"></div>
+            <div class="relative z-10 p-5 flex items-center justify-between text-xs">
+              <span class="font-semibold text-white uppercase text-[11px] bg-black/60 px-2.5 py-1 rounded">Ballroom 3</span>
+            </div>
+            <div class="relative z-10 p-5 pt-0">
+              <span class="text-[11px] font-mono text-[#F4F1EA] bg-black/60 px-2 py-0.5 rounded">300 Undangan</span>
+              <h3 class="font-display text-lg font-bold text-white mt-1">Intimate Wedding & Akad Nikah</h3>
+            </div>
+          </div>
+          <div class="p-4 bg-white border-t border-stone-100 flex items-center justify-between text-xs text-stone-600">
+            <span>Suasana hangat & khidmat untuk prosesi sakral</span>
+            <span class="text-[#A38139] font-medium">Lihat Detail →</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 9. CTA BAND & CONTACT FORM -->
+  <!-- ========================================== -->
+  <section id="kontak" class="py-24 bg-[#FAF8F5] text-stone-900 border-b border-stone-200 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-16">
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#B89753] mb-3">
+          <span>Reservasi & Konsultasi</span>
+          <span aria-hidden="true">·</span>
+          <span class="text-[#2C4A3E]">Respon Cepat Tim Sales</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] mb-4 text-balance">
+          Rencanakan Acara Prestisius Anda Bersama IICC
+        </h2>
+        <p class="text-base text-stone-600 font-body leading-relaxed">
+          Isi formulir di bawah ini untuk terhubung langsung dengan konsultan acara resmi IICC via WhatsApp atau hubungi hotline kami untuk kunjungan survei lokasi di Botani Square Mall Lt.2 Bogor.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Column 1: Contact Form (7 cols) -->
+        <div class="lg:col-span-7 bg-white border border-stone-200 rounded-2xl p-6 sm:p-10 shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
+          <h3 class="font-display text-xl sm:text-2xl font-bold text-[#1A1E24] mb-2">
+            Formulir Konsultasi & Penawaran Acara
+          </h3>
+          <p class="text-xs text-stone-500 mb-8 font-body">
+            Kolom bertanda (*) wajib diisi. Formulir akan otomatis terhubung ke WhatsApp resmi <strong class="text-stone-800">0811 1330 659</strong>.
+          </p>
+
+          <form id="iiccBookingForm" class="space-y-5">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="namaLengkap" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                  Nama Lengkap <span class="text-[#B89753]">*</span>
+                </label>
+                <input
+                  id="namaLengkap"
+                  type="text"
+                  required
+                  placeholder="Contoh: Budi Prasetyo"
+                  class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753]"
+                />
+              </div>
+
+              <div>
+                <label for="instansi" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                  Instansi / Perusahaan
+                </label>
+                <input
+                  id="instansi"
+                  type="text"
+                  placeholder="Kementerian / PT / Pribadi"
+                  class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753]"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="noWhatsApp" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                  No. WhatsApp Aktif <span class="text-[#B89753]">*</span>
+                </label>
+                <input
+                  id="noWhatsApp"
+                  type="tel"
+                  required
+                  placeholder="0812xxxxxxx"
+                  class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753]"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                  Alamat Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="budi@instansi.go.id"
+                  class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753]"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="jenisAcara" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                  Jenis Acara
+                </label>
+                <select
+                  id="jenisAcara"
+                  class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753]"
+                >
+                  <option value="Meeting & Konvensi">Meeting & Konvensi</option>
+                  <option value="Wedding & Resepsi">Wedding & Resepsi</option>
+                  <option value="Katering & Jamuan">Katering & Jamuan</option>
+                  <option value="Exhibition & Pameran">Exhibition & Pameran</option>
+                  <option value="Wisuda & Akademik">Wisuda & Akademik</option>
+                  <option value="Gala Dinner & Perayaan">Gala Dinner & Perayaan</option>
+                  <option value="Lainnya">Lainnya</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="estimasiTanggal" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                  Estimasi Tanggal Acara
+                </label>
+                <input
+                  id="estimasiTanggal"
+                  type="date"
+                  class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753]"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="estimasiTamu" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                  Estimasi Jumlah Tamu
+                </label>
+                <select
+                  id="estimasiTamu"
+                  class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753]"
+                >
+                  <option value="Skala Intim (Meeting Dewan Direksi / FGD)">Skala Intim (Meeting Dewan Direksi / FGD)</option>
+                  <option value="Skala Terbatas (Workshop / Seminar Khusus)">Skala Terbatas (Workshop / Seminar Khusus)</option>
+                  <option value="Skala Menengah (Gathering / Seminar)" selected>Skala Menengah (Gathering / Seminar)</option>
+                  <option value="Skala Besar (Konferensi / Resepsi Pernikahan)">Skala Besar (Konferensi / Resepsi Pernikahan)</option>
+                  <option value="Skala Akbar (Grand Ballroom / Wisuda / Simposium Nasional)">Skala Akbar (Grand Ballroom / Wisuda / Simposium Nasional)</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="ruangDiminati" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                  Ruang Diminati
+                </label>
+                <select
+                  id="ruangDiminati"
+                  class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753]"
+                >
+                  <option value="Grand Ballroom (Pillar-less)" selected>Grand Ballroom (Pillar-less)</option>
+                  <option value="Ballroom Flexi (Ballroom 1 / 2 / 3)">Ballroom Flexi (Ballroom 1 / 2 / 3)</option>
+                  <option value="Meeting Room Suites (Salak, Pangrango, dll.)">Meeting Room Suites (Salak, Pangrango, dll.)</option>
+                  <option value="Paket Full Venue (Ballroom + Meeting Room)">Paket Full Venue (Ballroom + Meeting Room)</option>
+                  <option value="Belum Menentukan (Konsultasi Rekomendasi)">Belum Menentukan (Konsultasi Rekomendasi)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="pesanKhusus" class="block text-xs font-semibold text-stone-700 mb-1.5">
+                Pesan / Kebutuhan Khusus
+              </label>
+              <textarea
+                id="pesanKhusus"
+                rows="3"
+                placeholder="Ceritakan detail rencana Anda, seperti kebutuhan katering, LED videowall, atau jadwal survei lokasi..."
+                class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753]"
+              ></textarea>
+            </div>
+
+            <div class="pt-2">
+              <button
+                type="submit"
+                class="w-full inline-flex items-center justify-center gap-2.5 py-4 px-6 text-sm font-semibold tracking-wide text-white bg-[#1A1E24] hover:bg-[#B89753] active:bg-[#A38139] rounded-lg transition-all shadow-md hover:shadow-lg"
+              >
+                <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span>💬 Kirim via WhatsApp (Resmi IICC)</span>
+              </button>
+            </div>
+
+            <p class="text-[11px] text-center text-stone-500">
+              Data Anda diteruskan langsung ke WhatsApp Sales Resmi IICC: <span class="text-stone-800 font-semibold font-mono">0811 1330 659</span>.
+            </p>
+
+          </form>
+
+        </div>
+
+        <!-- Column 2: Official Contact Information & Fast FAQ (5 cols) -->
+        <div class="lg:col-span-5 space-y-8">
+          
+          <div class="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-sm">
+            <div class="relative h-44 w-full overflow-hidden bg-stone-900">
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+                alt="IICC Sales & Concierge Office"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/40 to-transparent"></div>
+              <div class="absolute bottom-3 left-6 right-6">
+                <span class="text-[10px] font-semibold uppercase tracking-wider text-white bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm border border-white/20">
+                  Sales & Event Concierge Office
+                </span>
+                <h4 class="font-display text-lg font-bold text-white mt-1">
+                  IPB International Convention Center
+                </h4>
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8 pt-6">
+              <div class="space-y-4 text-xs sm:text-sm text-stone-600">
+                <div class="flex items-start gap-3">
+                  <span class="text-[#B89753] font-bold text-base mt-0.5">📍</span>
+                  <div>
+                    <strong class="text-stone-900 block font-semibold">Alamat Gedung:</strong>
+                    <span>Botani Square Mall, Jl. Pajajaran, Bogor Tengah (Depan Tugu Kujang)</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="text-[#2C4A3E] font-bold text-base mt-0.5">💬</span>
+                  <div>
+                    <strong class="text-stone-900 block font-semibold">WhatsApp Resmi:</strong>
+                    <a href="https://wa.me/628111330659" target="_blank" rel="noopener noreferrer" class="text-[#A38139] hover:underline font-mono font-semibold">
+                      0811 1330 659
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="text-[#B89753] font-bold text-base mt-0.5">📞</span>
+                  <div>
+                    <strong class="text-stone-900 block font-semibold">Telepon Kantor:</strong>
+                    <a href="tel:02518400659" class="text-stone-700 hover:text-stone-900 font-mono">
+                      0251 8400 659
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="text-[#B89753] font-bold text-base mt-0.5">✉️</span>
+                  <div>
+                    <strong class="text-stone-900 block font-semibold">Email Resmi:</strong>
+                    <a href="mailto:sm@ipbicc.com" class="text-stone-700 hover:text-stone-900 font-mono">
+                      sm@ipbicc.com
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="text-[#2C4A3E] font-bold text-base mt-0.5">🏛️</span>
+                  <div>
+                    <strong class="text-stone-900 block font-semibold">Status Entitas:</strong>
+                    <span>Unit Bisnis Strategis BLST (PT Bogor Life Science and Technology - Holding IPB University)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Accordion -->
+          <div class="bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+            <div class="text-xs font-semibold uppercase tracking-wider text-[#B89753] mb-4">
+              ❓ Pertanyaan Sering Diajukan
+            </div>
+
+            <div class="space-y-3">
+              <details class="group border-b border-stone-100 pb-3">
+                <summary class="cursor-pointer font-display text-sm font-semibold text-[#1A1E24] hover:text-[#B89753] flex justify-between items-center list-none">
+                  <span>Bagaimana kapasitas Grand Ballroom IICC?</span>
+                  <span class="text-[#B89753] font-bold group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                  Grand Ballroom IICC dapat menampung kapasitas akbar standing reception, teater konvensi bertaraf nasional, hingga jamuan round-table mewah tanpa halangan pilar visual.
+                </p>
+              </details>
+
+              <details class="group border-b border-stone-100 pb-3">
+                <summary class="cursor-pointer font-display text-sm font-semibold text-[#1A1E24] hover:text-[#B89753] flex justify-between items-center list-none">
+                  <span>Bagaimana aksesibilitas dan parkir kendaraan?</span>
+                  <span class="text-[#B89753] font-bold group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                  IICC berada di Lt.2 Mall Botani Square dengan kapasitas parkir ribuan mobil, akses tol 0 menit (Gerbang Tol Baranangsiang), serta terhubung dengan shelter DAMRI Bandara Soekarno-Hatta.
+                </p>
+              </details>
+
+              <details class="group">
+                <summary class="cursor-pointer font-display text-sm font-semibold text-[#1A1E24] hover:text-[#B89753] flex justify-between items-center list-none">
+                  <span>Apakah tersedia akomodasi penginapan di lokasi?</span>
+                  <span class="text-[#B89753] font-bold group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                  Ya, terhubung secara langsung via indoor corridor dengan IPB Convention Hotel & Suites, memudahkan akomodasi narasumber VIP dan keluarga pengantin.
+                </p>
+              </details>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 10. FOOTER -->
+  <!-- ========================================== -->
+  <footer class="bg-white text-stone-600 font-body text-xs border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-stone-200">
+        
+        <div class="md:col-span-5 space-y-4">
+          <a href="#" class="inline-block group focus:outline-none" aria-label="IPB International Convention Center">
+            <img 
+              src="/iicc-logo.svg" 
+              alt="IPB International Convention Center Logo" 
+              class="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+            />
+          </a>
+          <p class="text-stone-600 text-xs leading-relaxed max-w-md font-body">
+            Pusat konvensi dan pernikahan terkemuka di jantung Kota Bogor. Mengintegrasikan fasilitas ruang pertemuan canggih, katering berkelas, serta koneksi langsung ke Botani Square Mall dan IPB Convention Hotel.
+          </p>
+          <div class="pt-2 text-[11px] text-stone-500">
+            Unit bisnis strategis PT Bogor Life Science and Technology (BLST Holding IPB University).
+          </div>
+        </div>
+
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="font-display text-xs font-bold uppercase tracking-wider text-[#1A1E24]">
+            Navigasi Halaman
+          </h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#tentang" class="text-stone-600 hover:text-[#B89753]">Tentang IICC</a></li>
+            <li><a href="#fasilitas" class="text-stone-600 hover:text-[#B89753]">Fasilitas & Ballroom</a></li>
+            <li><a href="#layanan" class="text-stone-600 hover:text-[#B89753]">Layanan & Solusi Terpadu</a></li>
+            <li><a href="#klien" class="text-stone-600 hover:text-[#B89753]">Klien Terpercaya</a></li>
+            <li><a href="#galeri" class="text-stone-600 hover:text-[#B89753]">Galeri Dokumentasi</a></li>
+            <li><a href="#kontak" class="text-stone-600 hover:text-[#B89753]">Formulir Konsultasi & Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="font-display text-xs font-bold uppercase tracking-wider text-[#1A1E24]">
+            Kontak & Lokasi Resmi
+          </h4>
+          <div class="space-y-2.5 text-xs text-stone-600">
+            <div>📍 Botani Square Mall, Jl. Pajajaran, Bogor Tengah (Depan Tugu Kujang)</div>
+            <div>📞 Telp / WA: 0811 1330 659 / 0251 8400 659</div>
+            <div>✉️ Email: sm@ipbicc.com</div>
+            <div>🌐 Website: ipbconventioncenter.com</div>
+          </div>
+          <div class="pt-2">
+            <a href="https://maps.google.com/?q=IPB+International+Convention+Center+Botani+Square+Bogor" target="_blank" rel="noopener noreferrer" class="text-[11px] text-[#A38139] hover:text-[#B89753] font-semibold">
+              Buka Petunjuk Arah di Google Maps →
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-[11px] text-stone-500">
+          © IPB International Convention Center (Bagian dari BLST IPB). Hak Cipta Dilindungi Undang-Undang.
+        </p>
+        <a href="#" class="text-[11px] text-stone-500 hover:text-stone-900 transition-colors">
+          Kembali ke Atas ↑
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Concierge Button -->
+  <aside class="fixed bottom-6 right-6 z-40">
+    <a
+      href="https://wa.me/628111330659?text=Halo%20IICC,%20saya%20ingin%20berkonsultasi%20mengenai%20reservasi%20acara%20di%20IPB%20International%20Convention%20Center."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#2C4A3E] hover:bg-[#233b31] text-white shadow-xl shadow-stone-800/15 hover:shadow-stone-800/25 transition-all duration-300 transform hover:-translate-y-0.5 border border-white/20"
+    >
+      <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span class="text-xs font-semibold tracking-wide hidden sm:inline whitespace-nowrap">
+        WhatsApp Concierge Resmi
+      </span>
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+    </a>
+  </aside>
+
+  <!-- Interactive JavaScript for Single File Deployment -->
+  <script>
+    // Mobile Drawer Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Room Selection Handler
+    function selectRoom(roomName) {
+      const selectEl = document.getElementById('ruangDiminati');
+      if (selectEl) {
+        for (let i = 0; i < selectEl.options.length; i++) {
+          if (selectEl.options[i].text.includes(roomName)) {
+            selectEl.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+
+    // Service Selection Handler
+    function selectService(serviceName) {
+      const selectEl = document.getElementById('jenisAcara');
+      if (selectEl) {
+        for (let i = 0; i < selectEl.options.length; i++) {
+          if (selectEl.options[i].text.includes(serviceName)) {
+            selectEl.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+
+    // WhatsApp Form Submission Handler
+    const bookingForm = document.getElementById('iiccBookingForm');
+    if (bookingForm) {
+      bookingForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        const nama = document.getElementById('namaLengkap').value.trim();
+        const instansi = document.getElementById('instansi').value.trim() || '-';
+        const wa = document.getElementById('noWhatsApp').value.trim();
+        const email = document.getElementById('email').value.trim() || '-';
+        const jenisAcara = document.getElementById('jenisAcara').value;
+        const tanggal = document.getElementById('estimasiTanggal').value || 'Menyesuaikan Jadwal Kosong';
+        const tamu = document.getElementById('estimasiTamu').value;
+        const ruang = document.getElementById('ruangDiminati').value;
+        const pesan = document.getElementById('pesanKhusus').value.trim() || 'Mohon informasi ketersediaan tanggal dan paket penawaran';
+
+        if (!nama || !wa) {
+          alert('Mohon isi Nama Lengkap dan No. WhatsApp aktif Anda.');
+          return;
+        }
+
+        const message = `Halo Tim Reservasi IPB International Convention Center (IICC),
+
+Saya ingin berkonsultasi dan meminta penawaran resmi untuk rencana acara kami:
+
+📋 *DETAIL INQUIRY ACARA:*
+• *Nama Lengkap:* ${nama}
+• *Instansi / Perusahaan:* ${instansi}
+• *No. WhatsApp:* ${wa}
+• *Email:* ${email}
+• *Jenis Acara:* ${jenisAcara}
+• *Estimasi Tanggal Acara:* ${tanggal}
+• *Estimasi Jumlah Tamu:* ${tamu}
+• *Ruang Diminati:* ${ruang}
+• *Kebutuhan Khusus / Catatan:* ${pesan}
+
+Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Terima kasih.`;
+
+        const waUrl = `https://wa.me/628111330659?text=${encodeURIComponent(message)}`;
+        window.open(waUrl, '_blank');
+      });
+    }
+  </script>
+
+</body>
+</html>
