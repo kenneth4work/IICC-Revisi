@@ -1,3 +1,18 @@
+import facilityImg1 from '../assets/images/regenerated_image_1790562987470.jpg';
+import facilityImg2 from '../assets/images/regenerated_image_1790562989499.jpg';
+import facilityImg3 from '../assets/images/regenerated_image_1790562991330.jpg';
+
+import serviceImg1 from '../assets/images/regenerated_image_1790562994817.jpg';
+import serviceImg2 from '../assets/images/regenerated_image_1790562998658.jpg';
+import serviceImg3 from '../assets/images/regenerated_image_1790563003530.jpg';
+import serviceImg4 from '../assets/images/regenerated_image_1790563010347.jpg';
+
+import galleryImg1 from '../assets/images/regenerated_image_1790563011987.jpg';
+import galleryImg2 from '../assets/images/regenerated_image_1790563013604.jpg';
+import galleryImg3 from '../assets/images/regenerated_image_1790563018595.jpg';
+import galleryImg5 from '../assets/images/regenerated_image_1790563024848.jpg';
+import galleryImg6 from '../assets/images/regenerated_image_1790563020216.jpg';
+
 export interface FacilityItem {
   id: string;
   name: string;
@@ -39,7 +54,7 @@ export const FACILITIES: FacilityItem[] = [
     id: 'grand-ballroom',
     name: 'Grand Ballroom',
     subtitle: 'Pillar-less Iconic Venue untuk Skala Terbesar',
-    image: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80',
+    image: facilityImg1,
     capacityRange: 'Kapasitas Akbar',
     areaSize: 'Aula Sangat Luas',
     ceilingHeight: 'Plafon Tinggi Megah',
@@ -64,7 +79,7 @@ export const FACILITIES: FacilityItem[] = [
     id: 'ballroom-flexi',
     name: 'Ballroom',
     subtitle: 'Pilihan Unit Flexible Configuration',
-    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80',
+    image: facilityImg2,
     capacityRange: 'Kapasitas Fleksibel',
     areaSize: 'Konfigurasi Menengah',
     ceilingHeight: 'Plafon Akustik Nyaman',
@@ -89,7 +104,7 @@ export const FACILITIES: FacilityItem[] = [
     id: 'meeting-rooms',
     name: 'Meeting Room Suites',
     subtitle: 'Rangkaian Unit Meeting Room dengan High-Speed WiFi',
-    image: 'https://images.unsplash.com/photo-1431540015161-0bf866a2d407?auto=format&fit=crop&w=1200&q=80',
+    image: facilityImg3,
     capacityRange: 'Kapasitas Eksekutif',
     areaSize: 'Suites Eksklusif',
     ceilingHeight: 'Plafon Modern Nyaman',
@@ -117,7 +132,7 @@ export const SERVICES: ServiceItem[] = [
     number: 'MICE',
     title: 'Meeting & Convention',
     tagline: 'Standar Internasional untuk Rapat Kerja & Simposium',
-    image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1000&q=80',
+    image: serviceImg1,
     description: 'Pusat konvensi terakreditasi untuk penyelenggaraan konferensi internasional, rapat kementerian, simposium akademik, dan seminar nasional dengan dukungan teknis audio-visual kelas industri.',
     features: [
       'Peralatan Hybrid Meeting & Live Streaming multi-kamera',
@@ -131,7 +146,7 @@ export const SERVICES: ServiceItem[] = [
     number: 'WED',
     title: 'Wedding & Resepsi',
     tagline: 'Panggung Mewah untuk Janji Suci Seumur Hidup',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80',
+    image: serviceImg2,
     description: 'Wujudkan pernikahan impian dalam balutan kemewahan Ballroom megah berkapasitas besar. Dilengkapi ruang rias mewah, karpet merah eksklusif, serta koordinasi profesional untuk vendor dekorasi dan dokumentasi.',
     features: [
       'Pilihan paket Wedding All-In atau Venue-Only',
@@ -145,7 +160,7 @@ export const SERVICES: ServiceItem[] = [
     number: 'CHEF',
     title: 'Katering Premium',
     tagline: 'Cita Rasa Gastronomi Nusantara & Internasional',
-    image: 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1000&q=80',
+    image: serviceImg3,
     description: 'Disiapkan oleh tim chef in-house bersertifikasi dengan standar kebersihan tertinggi. Menyajikan variasi kuliner prasmanan, gubukan istimewa, coffee break gourmet, hingga jamuan fine dining kenegaraan.',
     features: [
       'Sertifikasi Halal & Hygiene HACCP compliant',
@@ -159,7 +174,7 @@ export const SERVICES: ServiceItem[] = [
     number: 'EXPO',
     title: 'Exhibition & Pameran',
     tagline: 'Lantai Pameran Strategis dengan Akses Terbuka',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80',
+    image: serviceImg4,
     description: 'Ruang pameran luas dengan lantai berdaya dukung tinggi dan sistem kelistrikan terdistribusi untuk expo pendidikan, job fair nasional, pameran buku, pameran UMKM, hingga bursa otomotif indoor.',
     features: [
       'Kapasitas deretan booth modular standar internasional',
@@ -211,7 +226,7 @@ export const GALLERY_ITEMS = [
     title: 'Grand Ballroom Majesty',
     category: 'Konvensi',
     tag: 'Simposium Nasional',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80',
+    image: galleryImg1,
     capacity: 'Kapasitas Konvensi Akbar',
     description: 'Pemandangan aula tanpa tiang dengan tata pencahayaan panggung pro dan kursi theater rapi.',
     gradient: 'from-amber-950/80 via-neutral-900 to-black',
@@ -222,7 +237,7 @@ export const GALLERY_ITEMS = [
     title: 'Royal Floral Wedding Ceremony',
     category: 'Wedding',
     tag: 'Akad & Resepsi Akbar',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
+    image: galleryImg2,
     capacity: 'Kapasitas Resepsi Mewah',
     description: 'Dekorasi pelaminan megah dengan instalasi lampu gantung kristal dan karpet mewah.',
     gradient: 'from-rose-950/80 via-neutral-900 to-black',
@@ -233,7 +248,7 @@ export const GALLERY_ITEMS = [
     title: 'Executive Meeting Suite Salak',
     category: 'Meeting',
     tag: 'Rapat Dewan Direksi',
-    image: 'https://images.unsplash.com/photo-1431540015161-0bf866a2d407?auto=format&fit=crop&w=1200&q=80',
+    image: galleryImg3,
     capacity: 'Format Eksekutif U-Shape',
     description: 'Konfigurasi meja U-shape berbalut linen rapi dengan smart screen interaktif.',
     gradient: 'from-blue-950/80 via-neutral-900 to-black',
@@ -255,7 +270,7 @@ export const GALLERY_ITEMS = [
     title: 'Inovasi Pendidikan & Expo Pameran',
     category: 'Konvensi',
     tag: 'Bursa Edukasi Nasional',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80',
+    image: galleryImg5,
     capacity: 'Kapasitas Expo & Pameran Luas',
     description: 'Penataan booth pameran luas dengan sirkulasi pengunjung yang lapang dan aman.',
     gradient: 'from-indigo-950/80 via-neutral-900 to-black',
@@ -266,7 +281,7 @@ export const GALLERY_ITEMS = [
     title: 'Romantic Evening Reception',
     category: 'Wedding',
     tag: 'Modern Wedding Celebration',
-    image: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1200&q=80',
+    image: galleryImg6,
     capacity: 'Format Gala Resepsi Intim',
     description: 'Suasana temaram hangat bertabur fairy lights yang memancarkan pesona keagungan cinta.',
     gradient: 'from-amber-950/80 via-neutral-900 to-black',

@@ -71,10 +71,7 @@ export const GallerySection: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/40 to-stone-950/20 pointer-events-none" />
 
                 {/* Top labels */}
-                <div className="relative z-10 p-5 flex items-center justify-between text-xs">
-                  <span className="font-semibold text-white uppercase tracking-wider text-[11px] bg-black/60 backdrop-blur-sm px-2.5 py-1 rounded border border-white/20">
-                    {item.tag}
-                  </span>
+                <div className="relative z-10 p-5 flex items-center justify-end text-xs">
                   <div className="p-2 rounded-full bg-black/60 backdrop-blur-sm text-[#B89753] group-hover:scale-110 transition-transform">
                     <Maximize2 className="w-3.5 h-3.5" />
                   </div>

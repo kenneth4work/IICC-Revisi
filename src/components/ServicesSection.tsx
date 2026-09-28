@@ -41,16 +41,6 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-transparent" />
-                
-                {/* Floating Badges */}
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                  <span className="font-display text-lg font-bold text-white bg-[#1A1E24]/90 backdrop-blur-sm px-3.5 py-1 rounded-md border border-[#B89753]/40 shadow-sm">
-                    {service.number}
-                  </span>
-                  <span className="text-xs font-semibold tracking-wider uppercase text-white bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
-                    {service.badge}
-                  </span>
-                </div>
               </div>
 
               <div className="p-7 sm:p-8 flex-1 flex flex-col justify-between bg-white">

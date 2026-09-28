@@ -1,5 +1,7 @@
 import React from 'react';
 import { MapPin, Hotel, ShieldCheck, Clock, Building, Compass, Sparkles } from 'lucide-react';
+import aboutHotelImg from '../assets/images/regenerated_image_1790563028677.jpg';
+import aboutMallImg from '../assets/images/regenerated_image_1790563026163.jpg';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -136,7 +138,7 @@ export const AboutSection: React.FC = () => {
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="group relative rounded-xl overflow-hidden border border-stone-200 bg-white h-48 shadow-sm hover:shadow-md transition-all duration-300">
             <img
-              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
+              src={aboutHotelImg}
               alt="IPB Convention Hotel Terintegrasi"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
@@ -149,7 +151,7 @@ export const AboutSection: React.FC = () => {
 
           <div className="group relative rounded-xl overflow-hidden border border-stone-200 bg-white h-48 shadow-sm hover:shadow-md transition-all duration-300">
             <img
-              src="https://images.unsplash.com/photo-1567449303078-57ad995bd301?auto=format&fit=crop&w=800&q=80"
+              src={aboutMallImg}
               alt="Botani Square Mall Shopping & Dining"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />

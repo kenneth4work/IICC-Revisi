@@ -71,7 +71,7 @@ export const FacilitiesSection: React.FC<FacilitiesSectionProps> = ({ onSelectFa
                 className="group relative rounded-xl bg-white border border-stone-200 hover:border-[#B89753]/60 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)]"
               >
                 {/* Visual Header / Architectural Photo & Simulation Canvas */}
-                <div className="relative h-60 bg-stone-900 overflow-hidden border-b border-stone-200 flex flex-col justify-between">
+                <div className="relative h-60 bg-stone-900 overflow-hidden border-b border-stone-200 flex flex-col justify-end">
                   {/* Real Facility Photo */}
                   <img
                     src={facility.image}
@@ -82,18 +82,8 @@ export const FacilitiesSection: React.FC<FacilitiesSectionProps> = ({ onSelectFa
                   {/* Gradient Scrim for crisp text contrast */}
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/50 to-stone-950/30 pointer-events-none" />
 
-                  {/* Top line specs */}
-                  <div className="relative z-10 p-5 flex items-center justify-between text-xs text-stone-200">
-                    <span className="font-mono text-[#F4F1EA] font-semibold tracking-wider bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm border border-white/10">
-                      {facility.areaSize} · {facility.ceilingHeight}
-                    </span>
-                    <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-[#B89753] text-stone-950 font-bold tracking-tight shadow">
-                      {facility.capacityRange}
-                    </span>
-                  </div>
-
                   {/* Feature Focus Banner */}
-                  <div className="relative z-10 p-5 pt-0">
+                  <div className="relative z-10 p-5">
                     <div className="flex items-baseline gap-2">
                       <span className="text-xl sm:text-2xl font-display font-bold text-white drop-shadow-md">
                         {facility.name}
