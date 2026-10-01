@@ -24,7 +24,7 @@ export const GallerySection: React.FC = () => {
               <span aria-hidden="true">·</span>
               <span className="text-[#2C4A3E]">Portfolio Momen Megah</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] mb-3 text-balance">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide text-[#1A1E24] mb-3 text-balance">
               Galeri Acara & Kemegahan Ruang
             </h2>
             <p className="text-base text-stone-600 font-body leading-relaxed">

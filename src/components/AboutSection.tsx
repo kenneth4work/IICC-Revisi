@@ -15,7 +15,7 @@ export const AboutSection: React.FC = () => {
             <span aria-hidden="true">·</span>
             <span className="text-[#2C4A3E]">Unit Bisnis Strategis BLST IPB</span>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] mb-4 text-balance">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide text-[#1A1E24] mb-4 text-balance">
             Pusat Konvensi Kelas Dunia di Kota Bogor
           </h2>
           <p className="font-display text-lg sm:text-xl text-[#B89753] font-medium italic mb-6">
@@ -110,7 +110,7 @@ export const AboutSection: React.FC = () => {
               </div>
 
               <div className="my-4">
-                <div className="text-3xl sm:text-4xl font-display font-bold text-[#1A1E24] tracking-tight">
+                <div className="text-3xl sm:text-4xl font-display font-bold text-[#1A1E24] tracking-wide">
                   Dedikasi & Prestise
                 </div>
                 <div className="text-base font-semibold text-[#B89753] mt-2">

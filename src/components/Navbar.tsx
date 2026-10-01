@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
         </a>
 
         {/* Zone 2: Clean text navigation links */}
-        <nav className="hidden md:flex items-center space-x-7 lg:space-x-8 text-sm font-medium text-stone-700">
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-7 text-xs lg:text-[13px] font-display font-semibold uppercase tracking-wider text-stone-700">
           {navLinks.map((link) => (
             <a
               key={link.label}

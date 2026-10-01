@@ -118,7 +118,7 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
             <span aria-hidden="true">·</span>
             <span className="text-[#2C4A3E]">Respon Cepat Tim Sales</span>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] mb-4 text-balance">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide text-[#1A1E24] mb-4 text-balance">
             Rencanakan Acara Prestisius Anda Bersama IICC
           </h2>
           <p className="text-base text-stone-600 font-body leading-relaxed">

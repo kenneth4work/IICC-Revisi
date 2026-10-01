@@ -34,14 +34,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-center flex flex-col items-center">
         
         {/* Eyebrow as clean text with typographic separator */}
-        <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#B89753] mb-6 px-4 py-1.5 rounded-full bg-[#B89753]/10 border border-[#B89753]/25 shadow-sm">
+        <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-display font-bold tracking-widest uppercase text-[#B89753] mb-6 px-4 py-1.5 rounded-full bg-[#B89753]/10 border border-[#B89753]/25 shadow-sm">
           <span>IPB International Convention Center</span>
           <span aria-hidden="true" className="text-[#B89753]">·</span>
           <span>Bogor</span>
         </div>
 
         {/* H1 with balanced typography in deep charcoal */}
-        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#1A1E24] mb-6 max-w-4xl text-balance leading-[1.12]">
+        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold tracking-wide text-[#1A1E24] mb-6 max-w-4xl text-balance leading-[1.15]">
           Where Prestige Meets Purpose<span className="text-[#B89753]">.</span>
         </h1>
 

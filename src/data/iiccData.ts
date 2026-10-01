@@ -1,17 +1,8 @@
 import facilityImg1 from '../assets/images/regenerated_image_1790562987470.jpg';
 import facilityImg2 from '../assets/images/regenerated_image_1790562989499.jpg';
-import facilityImg3 from '../assets/images/regenerated_image_1790562991330.jpg';
-
-import serviceImg1 from '../assets/images/regenerated_image_1790562994817.jpg';
-import serviceImg2 from '../assets/images/regenerated_image_1790562998658.jpg';
 import serviceImg3 from '../assets/images/regenerated_image_1790563003530.jpg';
 import serviceImg4 from '../assets/images/regenerated_image_1790563010347.jpg';
-
 import galleryImg1 from '../assets/images/regenerated_image_1790563011987.jpg';
-import galleryImg2 from '../assets/images/regenerated_image_1790563013604.jpg';
-import galleryImg3 from '../assets/images/regenerated_image_1790563018595.jpg';
-import galleryImg5 from '../assets/images/regenerated_image_1790563024848.jpg';
-import galleryImg6 from '../assets/images/regenerated_image_1790563020216.jpg';
 
 export interface FacilityItem {
   id: string;
@@ -104,7 +95,7 @@ export const FACILITIES: FacilityItem[] = [
     id: 'meeting-rooms',
     name: 'Meeting Room Suites',
     subtitle: 'Rangkaian Unit Meeting Room dengan High-Speed WiFi',
-    image: facilityImg3,
+    image: 'https://images.unsplash.com/photo-1431540015161-0bf866a2d407?auto=format&fit=crop&w=1200&q=80',
     capacityRange: 'Kapasitas Eksekutif',
     areaSize: 'Suites Eksklusif',
     ceilingHeight: 'Plafon Modern Nyaman',
@@ -132,7 +123,7 @@ export const SERVICES: ServiceItem[] = [
     number: 'MICE',
     title: 'Meeting & Convention',
     tagline: 'Standar Internasional untuk Rapat Kerja & Simposium',
-    image: serviceImg1,
+    image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1000&q=80',
     description: 'Pusat konvensi terakreditasi untuk penyelenggaraan konferensi internasional, rapat kementerian, simposium akademik, dan seminar nasional dengan dukungan teknis audio-visual kelas industri.',
     features: [
       'Peralatan Hybrid Meeting & Live Streaming multi-kamera',
@@ -146,7 +137,7 @@ export const SERVICES: ServiceItem[] = [
     number: 'WED',
     title: 'Wedding & Resepsi',
     tagline: 'Panggung Mewah untuk Janji Suci Seumur Hidup',
-    image: serviceImg2,
+    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80',
     description: 'Wujudkan pernikahan impian dalam balutan kemewahan Ballroom megah berkapasitas besar. Dilengkapi ruang rias mewah, karpet merah eksklusif, serta koordinasi profesional untuk vendor dekorasi dan dokumentasi.',
     features: [
       'Pilihan paket Wedding All-In atau Venue-Only',
@@ -237,7 +228,7 @@ export const GALLERY_ITEMS = [
     title: 'Royal Floral Wedding Ceremony',
     category: 'Wedding',
     tag: 'Akad & Resepsi Akbar',
-    image: galleryImg2,
+    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
     capacity: 'Kapasitas Resepsi Mewah',
     description: 'Dekorasi pelaminan megah dengan instalasi lampu gantung kristal dan karpet mewah.',
     gradient: 'from-rose-950/80 via-neutral-900 to-black',
@@ -248,7 +239,7 @@ export const GALLERY_ITEMS = [
     title: 'Executive Meeting Suite Salak',
     category: 'Meeting',
     tag: 'Rapat Dewan Direksi',
-    image: galleryImg3,
+    image: 'https://images.unsplash.com/photo-1431540015161-0bf866a2d407?auto=format&fit=crop&w=1200&q=80',
     capacity: 'Format Eksekutif U-Shape',
     description: 'Konfigurasi meja U-shape berbalut linen rapi dengan smart screen interaktif.',
     gradient: 'from-blue-950/80 via-neutral-900 to-black',
@@ -270,7 +261,7 @@ export const GALLERY_ITEMS = [
     title: 'Inovasi Pendidikan & Expo Pameran',
     category: 'Konvensi',
     tag: 'Bursa Edukasi Nasional',
-    image: galleryImg5,
+    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80',
     capacity: 'Kapasitas Expo & Pameran Luas',
     description: 'Penataan booth pameran luas dengan sirkulasi pengunjung yang lapang dan aman.',
     gradient: 'from-indigo-950/80 via-neutral-900 to-black',
@@ -281,7 +272,7 @@ export const GALLERY_ITEMS = [
     title: 'Romantic Evening Reception',
     category: 'Wedding',
     tag: 'Modern Wedding Celebration',
-    image: galleryImg6,
+    image: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1200&q=80',
     capacity: 'Format Gala Resepsi Intim',
     description: 'Suasana temaram hangat bertabur fairy lights yang memancarkan pesona keagungan cinta.',
     gradient: 'from-amber-950/80 via-neutral-900 to-black',
