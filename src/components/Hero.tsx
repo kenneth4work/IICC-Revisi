@@ -1,11 +1,16 @@
 import React from 'react';
 import { MessageSquare, ArrowDown, Building2, Users2, Award, MapPin } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../i18n/translations';
 
 interface HeroProps {
   onOpenBooking: () => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
+  const { language } = useLanguage();
+  const t = translations[language].hero;
+
   return (
     <section className="relative min-h-[88vh] lg:min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#FAF8F5] border-b border-stone-200">
       
@@ -34,20 +39,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-center flex flex-col items-center">
         
         {/* Eyebrow as clean text with typographic separator */}
-        <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-display font-bold tracking-widest uppercase text-[#B89753] mb-6 px-4 py-1.5 rounded-full bg-[#B89753]/10 border border-[#B89753]/25 shadow-sm">
-          <span>IPB International Convention Center</span>
+        <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#B89753] mb-6 px-4 py-1.5 rounded-full bg-[#B89753]/10 border border-[#B89753]/25 shadow-sm">
+          <span>{t.eyebrow}</span>
           <span aria-hidden="true" className="text-[#B89753]">·</span>
-          <span>Bogor</span>
+          <span>{t.city}</span>
         </div>
 
         {/* H1 with balanced typography in deep charcoal */}
-        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold tracking-wide text-[#1A1E24] mb-6 max-w-4xl text-balance leading-[1.15]">
-          Where Prestige Meets Purpose<span className="text-[#B89753]">.</span>
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#1A1E24] mb-6 max-w-4xl text-balance leading-[1.15]">
+          {t.title}<span className="text-[#B89753]">.</span>
         </h1>
 
         {/* Sub-headline */}
-        <p className="font-body text-base sm:text-xl text-stone-600 max-w-3xl text-balance font-normal leading-relaxed mb-10">
-          Pusat konvensi &amp; pernikahan bergengsi di jantung Kota Bogor - Pusat MICE &amp; Wedding Venue prestisius dan eksklusif di jantung Kota Bogor
+        <p className="text-base sm:text-xl text-stone-600 max-w-3xl text-balance font-normal leading-relaxed mb-10">
+          {t.subheadline}
         </p>
 
         {/* CTA Decision Block */}
@@ -58,19 +63,19 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 text-sm font-semibold tracking-wide text-white bg-[#1A1E24] hover:bg-[#B89753] active:bg-[#A38139] rounded-md transition-all shadow-md hover:shadow-lg hover:shadow-stone-900/10 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-[#B89753]"
           >
             <MessageSquare className="w-4 h-4 fill-white" />
-            <span>💬 Konsultasi Sekarang</span>
+            <span>{t.ctaConsult}</span>
           </button>
 
           <a
             href="#fasilitas"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 text-sm font-semibold text-stone-700 hover:text-stone-900 bg-white hover:bg-stone-50 border border-stone-200 rounded-md transition-all shadow-sm hover:shadow whitespace-nowrap"
           >
-            <span>Lihat Fasilitas</span>
+            <span>{t.ctaFacilities}</span>
             <ArrowDown className="w-4 h-4 text-[#B89753]" />
           </a>
         </div>
 
-        {/* Adjacent Proof Strip - Refined & Aesthetic */}
+        {/* Adjacent Proof Strip */}
         <div className="w-full max-w-4xl border-t border-stone-200/80 pt-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 text-left">
             
@@ -79,8 +84,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 <Award className="w-5 h-5" />
               </div>
               <div>
-                <p className="font-display text-sm sm:text-base font-bold text-[#1A1E24] leading-tight">Pengalaman Teruji</p>
-                <p className="text-[11px] text-stone-500 mt-0.5">Holding BLST IPB University</p>
+                <p className="text-sm sm:text-base font-bold text-[#1A1E24] leading-tight">{t.proof1Title}</p>
+                <p className="text-[11px] text-stone-500 mt-0.5">{t.proof1Subtitle}</p>
               </div>
             </div>
 
@@ -89,8 +94,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 <Users2 className="w-5 h-5" />
               </div>
               <div>
-                <p className="font-display text-sm sm:text-base font-bold text-[#1A1E24] leading-tight">Klien Nasional</p>
-                <p className="text-[11px] text-stone-500 mt-0.5">Kementerian, BUMN & Swasta</p>
+                <p className="text-sm sm:text-base font-bold text-[#1A1E24] leading-tight">{t.proof2Title}</p>
+                <p className="text-[11px] text-stone-500 mt-0.5">{t.proof2Subtitle}</p>
               </div>
             </div>
 
@@ -99,8 +104,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 <Building2 className="w-5 h-5" />
               </div>
               <div>
-                <p className="font-display text-sm sm:text-base font-bold text-[#1A1E24] leading-tight">Grand Ballroom</p>
-                <p className="text-[11px] text-stone-500 mt-0.5">Pillar-less High Ceiling</p>
+                <p className="text-sm sm:text-base font-bold text-[#1A1E24] leading-tight">{t.proof3Title}</p>
+                <p className="text-[11px] text-stone-500 mt-0.5">{t.proof3Subtitle}</p>
               </div>
             </div>
 
@@ -109,8 +114,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <p className="font-display text-sm sm:text-base font-bold text-[#1A1E24] leading-tight">Lokasi Strategis</p>
-                <p className="text-[11px] text-stone-500 mt-0.5">Botani Square Mall · Tugu Kujang</p>
+                <p className="text-sm sm:text-base font-bold text-[#1A1E24] leading-tight">{t.proof4Title}</p>
+                <p className="text-[11px] text-stone-500 mt-0.5">{t.proof4Subtitle}</p>
               </div>
             </div>
 

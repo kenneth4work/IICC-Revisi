@@ -1,15 +1,10 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../i18n/translations';
 
 export const MarqueeStrip: React.FC = () => {
-  const marqueeItems = [
-    'Grand Ballroom',
-    'Wedding Ceremony',
-    'Meeting & Konvensi',
-    'Exhibition',
-    'Katering Premium',
-    'Botani Square Lt.2',
-    'Bogor',
-  ];
+  const { language } = useLanguage();
+  const marqueeItems = translations[language].marquee;
 
   // Repeat for continuous marquee effect
   const repeatedItems = [...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems];
@@ -23,7 +18,7 @@ export const MarqueeStrip: React.FC = () => {
       <div className="animate-marquee items-center gap-8 whitespace-nowrap">
         {repeatedItems.map((item, idx) => (
           <div key={idx} className="flex items-center gap-8">
-            <span className="font-display text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">
+            <span className="text-xs md:text-sm tracking-widest uppercase font-semibold text-stone-700">
               {item}
             </span>
             <span aria-hidden="true" className="text-[#B89753] text-sm">

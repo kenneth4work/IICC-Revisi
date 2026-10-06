@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { MessageSquare, Phone, Mail, MapPin, CheckCircle2, Copy, ExternalLink, Building2, HelpCircle } from 'lucide-react';
-import { FAQS } from '../data/iiccData';
+import { getFaqs } from '../data/iiccData';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../i18n/translations';
 
 interface BookingFormSectionProps {
   initialFacility?: string;
@@ -11,15 +13,19 @@ export const BookingFormSection: React.FC<BookingFormSectionProps> = ({
   initialFacility,
   initialService,
 }) => {
+  const { language } = useLanguage();
+  const t = translations[language].booking;
+  const faqs = getFaqs(language);
+
   const [formData, setFormData] = useState({
     namaLengkap: '',
     instansi: '',
     noWhatsApp: '',
     email: '',
-    jenisAcara: 'Meeting & Konvensi',
+    jenisAcara: t.optionsEventType[0],
     estimasiTanggal: '',
-    estimasiTamu: 'Skala Menengah (Gathering / Seminar)',
-    ruangDiminati: 'Grand Ballroom',
+    estimasiTamu: t.optionsGuestCount[2],
+    ruangDiminati: t.optionsRooms[0],
     pesanKhusus: '',
   });
 
@@ -40,49 +46,23 @@ export const BookingFormSection: React.FC<BookingFormSectionProps> = ({
     }
   }, [initialService]);
 
-  const jenisAcaraOptions = [
-    'Meeting & Konvensi',
-    'Wedding & Resepsi',
-    'Katering & Jamuan',
-    'Exhibition & Pameran',
-    'Wisuda & Akademik',
-    'Gala Dinner & Perayaan',
-    'Lainnya',
-  ];
-
-  const estimasiTamuOptions = [
-    'Skala Intim (Meeting Dewan Direksi / FGD)',
-    'Skala Terbatas (Workshop / Seminar Khusus)',
-    'Skala Menengah (Gathering / Seminar)',
-    'Skala Besar (Konferensi / Resepsi Pernikahan)',
-    'Skala Akbar (Grand Ballroom / Wisuda / Simposium Nasional)',
-  ];
-
-  const ruangDiminatiOptions = [
-    'Grand Ballroom (Pillar-less)',
-    'Ballroom Flexi (Ballroom 1 / 2 / 3)',
-    'Meeting Room Suites (Salak, Pangrango, dll.)',
-    'Paket Full Venue (Ballroom + Meeting Room)',
-    'Belum Menentukan (Konsultasi Rekomendasi)',
-  ];
-
   const generateWhatsAppMessage = () => {
-    return `Halo Tim Reservasi IPB International Convention Center (IICC),
+    return `${t.waGreeting}
 
-Saya ingin berkonsultasi dan meminta penawaran resmi untuk rencana acara kami:
+${t.waPurpose}
 
-📋 *DETAIL INQUIRY ACARA:*
-• *Nama Lengkap:* ${formData.namaLengkap || '-'}
-• *Instansi / Perusahaan:* ${formData.instansi || '-'}
-• *No. WhatsApp:* ${formData.noWhatsApp || '-'}
-• *Email:* ${formData.email || '-'}
-• *Jenis Acara:* ${formData.jenisAcara}
-• *Estimasi Tanggal Acara:* ${formData.estimasiTanggal || 'Menyesuaikan Jadwal Kosong'}
-• *Estimasi Jumlah Tamu:* ${formData.estimasiTamu}
-• *Ruang Diminati:* ${formData.ruangDiminati}
-• *Kebutuhan Khusus / Catatan:* ${formData.pesanKhusus || 'Mohon informasi ketersediaan tanggal dan paket penawaran'}
+${t.waDetailTitle}
+• *${t.waName}:* ${formData.namaLengkap || '-'}
+• *${t.waInstansi}:* ${formData.instansi || '-'}
+• *${t.waPhone}:* ${formData.noWhatsApp || '-'}
+• *${t.waEmail}:* ${formData.email || '-'}
+• *${t.waType}:* ${formData.jenisAcara}
+• *${t.waDate}:* ${formData.estimasiTanggal || (language === 'en' ? 'Flexible / To be confirmed' : 'Menyesuaikan Jadwal Kosong')}
+• *${t.waGuests}:* ${formData.estimasiTamu}
+• *${t.waRoom}:* ${formData.ruangDiminati}
+• *${t.waNotes}:* ${formData.pesanKhusus || (language === 'en' ? 'Please provide availability and rate proposal.' : 'Mohon informasi ketersediaan tanggal dan paket penawaran')}
 
-Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Terima kasih.`;
+${t.waClosing}`;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -114,15 +94,15 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
         {/* Section Top Header */}
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#B89753] mb-3">
-            <span>Reservasi & Konsultasi</span>
+            <span>{t.eyebrow}</span>
             <span aria-hidden="true">·</span>
-            <span className="text-[#2C4A3E]">Respon Cepat Tim Sales</span>
+            <span className="text-[#2C4A3E]">{t.eyebrowSub}</span>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide text-[#1A1E24] mb-4 text-balance">
-            Rencanakan Acara Prestisius Anda Bersama IICC
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] mb-4 text-balance">
+            {t.title}
           </h2>
-          <p className="text-base text-stone-600 font-body leading-relaxed">
-            Isi formulir di bawah ini untuk terhubung langsung dengan konsultan acara resmi IICC via WhatsApp atau hubungi hotline kami untuk kunjungan survei lokasi di Botani Square Mall Lt.2 Bogor.
+          <p className="text-base text-stone-600 font-normal leading-relaxed">
+            {t.subtitle}
           </p>
         </div>
 
@@ -131,11 +111,13 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
           
           {/* Column 1: Contact Form (7 cols) */}
           <div className="lg:col-span-7 bg-white border border-stone-200 rounded-2xl p-6 sm:p-10 shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
-            <h3 className="font-display text-xl sm:text-2xl font-bold text-[#1A1E24] mb-2">
-              Formulir Konsultasi & Penawaran Acara
+            <h3 className="text-xl sm:text-2xl font-bold text-[#1A1E24] mb-2">
+              {t.title}
             </h3>
-            <p className="text-xs text-stone-500 mb-8 font-body">
-              Kolom bertanda (*) wajib diisi. Formulir akan otomatis terhubung ke WhatsApp resmi <strong className="text-stone-800">0811 1330 659</strong>.
+            <p className="text-xs text-stone-500 mb-8 font-normal">
+              {language === 'en'
+                ? 'Fields marked with (*) are required. Submissions directly connect to official WhatsApp 0811 1330 659.'
+                : 'Kolom bertanda (*) wajib diisi. Formulir akan otomatis terhubung ke WhatsApp resmi 0811 1330 659.'}
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -144,7 +126,7 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="namaLengkap" className="block text-xs font-semibold text-stone-700 mb-1.5">
-                    Nama Lengkap <span className="text-[#B89753]">*</span>
+                    {t.fullName} <span className="text-[#B89753]">*</span>
                   </label>
                   <input
                     id="namaLengkap"
@@ -152,21 +134,21 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                     required
                     value={formData.namaLengkap}
                     onChange={(e) => setFormData({ ...formData, namaLengkap: e.target.value })}
-                    placeholder="Contoh: Budi Prasetyo"
+                    placeholder={t.fullNamePlaceholder}
                     className="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753] transition-colors"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="instansi" className="block text-xs font-semibold text-stone-700 mb-1.5">
-                    Instansi / Perusahaan
+                    {t.institution}
                   </label>
                   <input
                     id="instansi"
                     type="text"
                     value={formData.instansi}
                     onChange={(e) => setFormData({ ...formData, instansi: e.target.value })}
-                    placeholder="Kementerian / PT / Pribadi"
+                    placeholder={t.institutionPlaceholder}
                     className="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753] transition-colors"
                   />
                 </div>
@@ -176,7 +158,7 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="noWhatsApp" className="block text-xs font-semibold text-stone-700 mb-1.5">
-                    No. WhatsApp Aktif <span className="text-[#B89753]">*</span>
+                    {t.whatsapp} <span className="text-[#B89753]">*</span>
                   </label>
                   <input
                     id="noWhatsApp"
@@ -184,21 +166,21 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                     required
                     value={formData.noWhatsApp}
                     onChange={(e) => setFormData({ ...formData, noWhatsApp: e.target.value })}
-                    placeholder="0812xxxxxxx"
+                    placeholder={t.whatsappPlaceholder}
                     className="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753] transition-colors"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-xs font-semibold text-stone-700 mb-1.5">
-                    Alamat Email
+                    {t.email}
                   </label>
                   <input
                     id="email"
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="budi@instansi.go.id"
+                    placeholder={t.emailPlaceholder}
                     className="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753] transition-colors"
                   />
                 </div>
@@ -208,7 +190,7 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="jenisAcara" className="block text-xs font-semibold text-stone-700 mb-1.5">
-                    Jenis Acara
+                    {t.eventType}
                   </label>
                   <select
                     id="jenisAcara"
@@ -216,7 +198,7 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                     onChange={(e) => setFormData({ ...formData, jenisAcara: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753] transition-colors"
                   >
-                    {jenisAcaraOptions.map((opt) => (
+                    {t.optionsEventType.map((opt) => (
                       <option key={opt} value={opt}>
                         {opt}
                       </option>
@@ -226,7 +208,7 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
 
                 <div>
                   <label htmlFor="estimasiTanggal" className="block text-xs font-semibold text-stone-700 mb-1.5">
-                    Estimasi Tanggal Acara
+                    {t.estimatedDate}
                   </label>
                   <input
                     id="estimasiTanggal"
@@ -242,7 +224,7 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="estimasiTamu" className="block text-xs font-semibold text-stone-700 mb-1.5">
-                    Estimasi Jumlah Tamu
+                    {t.guestCount}
                   </label>
                   <select
                     id="estimasiTamu"
@@ -250,7 +232,7 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                     onChange={(e) => setFormData({ ...formData, estimasiTamu: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753] transition-colors"
                   >
-                    {estimasiTamuOptions.map((opt) => (
+                    {t.optionsGuestCount.map((opt) => (
                       <option key={opt} value={opt}>
                         {opt}
                       </option>
@@ -260,7 +242,7 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
 
                 <div>
                   <label htmlFor="ruangDiminati" className="block text-xs font-semibold text-stone-700 mb-1.5">
-                    Ruang Diminati
+                    {t.desiredRoom}
                   </label>
                   <select
                     id="ruangDiminati"
@@ -268,7 +250,7 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                     onChange={(e) => setFormData({ ...formData, ruangDiminati: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753] transition-colors"
                   >
-                    {ruangDiminatiOptions.map((opt) => (
+                    {t.optionsRooms.map((opt) => (
                       <option key={opt} value={opt}>
                         {opt}
                       </option>
@@ -280,15 +262,15 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
               {/* Row 5: Pesan Khusus */}
               <div>
                 <label htmlFor="pesanKhusus" className="block text-xs font-semibold text-stone-700 mb-1.5">
-                  Pesan / Kebutuhan Khusus
+                  {t.notes}
                 </label>
                 <textarea
                   id="pesanKhusus"
                   rows={3}
                   value={formData.pesanKhusus}
                   onChange={(e) => setFormData({ ...formData, pesanKhusus: e.target.value })}
-                  placeholder="Ceritakan detail rencana Anda, seperti kebutuhan katering, LED videowall, atau jadwal survei lokasi..."
-                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753] transition-colors font-body"
+                  placeholder={t.notesPlaceholder}
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-stone-200 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-[#B89753] focus:bg-white focus:ring-1 focus:ring-[#B89753] transition-colors font-normal"
                 />
               </div>
 
@@ -299,13 +281,15 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                   className="w-full inline-flex items-center justify-center gap-2.5 py-4 px-6 text-sm font-semibold tracking-wide text-white bg-[#1A1E24] hover:bg-[#B89753] active:bg-[#A38139] rounded-lg transition-all shadow-md hover:shadow-lg whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-[#B89753]"
                 >
                   <MessageSquare className="w-4 h-4 fill-white" />
-                  <span>💬 Kirim via WhatsApp (Resmi IICC)</span>
+                  <span>{t.submitBtn}</span>
                 </button>
               </div>
 
               {/* Submission info text */}
               <p className="text-[11px] text-center text-stone-500">
-                Data Anda aman dan diteruskan langsung ke WhatsApp Sales Resmi IICC: <span className="text-stone-800 font-semibold font-mono">0811 1330 659</span>.
+                {language === 'en'
+                  ? 'Your information is safely transmitted directly to the official IICC event concierge at 0811 1330 659.'
+                  : 'Data Anda aman dan diteruskan langsung ke WhatsApp Sales Resmi IICC: 0811 1330 659.'}
               </p>
 
             </form>
@@ -317,10 +301,10 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                   <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <p className="text-sm font-semibold text-stone-900">
-                      Permintaan Anda Berhasil Diformat!
+                      {t.successTitle}
                     </p>
                     <p className="text-xs text-stone-600 mt-1">
-                      Jika WhatsApp tidak terbuka otomatis pada perangkat Anda, salin pesan di bawah ini atau klik tombol kirim ulang.
+                      {t.successDesc}
                     </p>
                     
                     <div className="mt-3 flex items-center gap-2">
@@ -330,7 +314,7 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-white hover:bg-stone-100 border border-stone-200 text-xs text-stone-700 transition-colors shadow-sm"
                       >
                         <Copy className="w-3.5 h-3.5 text-[#B89753]" />
-                        <span>{copiedText ? 'Tersalin ke Clipboard!' : 'Salin Teks WhatsApp'}</span>
+                        <span>{copiedText ? t.copied : t.copyText}</span>
                       </button>
                       
                       <a
@@ -339,7 +323,7 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded bg-[#2C4A3E] hover:bg-[#233b31] text-xs text-white transition-colors shadow-sm"
                       >
-                        <span>Buka WhatsApp Lagi</span>
+                        <span>{t.openWa}</span>
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                     </div>
@@ -353,9 +337,9 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
           {/* Column 2: Official Contact Information & Fast FAQ (5 cols) */}
           <div className="lg:col-span-5 space-y-8">
             
-            {/* Official Profile & Contacts Box with Real Venue Photo Header */}
+            {/* Official Profile & Contacts Box */}
             <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
-              {/* Venue Front/Reception Photographic Banner */}
+              {/* Venue Photographic Banner */}
               <div className="relative h-44 w-full overflow-hidden bg-stone-900">
                 <img
                   src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
@@ -365,9 +349,9 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/40 to-transparent" />
                 <div className="absolute bottom-3 left-6 right-6">
                   <span className="text-[10px] font-semibold uppercase tracking-wider text-white bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm border border-white/20">
-                    Sales & Event Concierge Office
+                    {language === 'en' ? 'Sales & Event Concierge Office' : 'Kantor Sales & Event Concierge'}
                   </span>
-                  <h4 className="font-display text-lg font-bold text-white mt-1">
+                  <h4 className="text-lg font-bold text-white mt-1">
                     IPB International Convention Center
                   </h4>
                 </div>
@@ -379,15 +363,19 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-[#B89753] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-stone-900 block font-semibold">Alamat Gedung:</strong>
-                      <span>Botani Square Mall, Jl. Pajajaran, Bogor Tengah (Depan Tugu Kujang)</span>
+                      <strong className="text-stone-900 block font-semibold">
+                        {language === 'en' ? 'Building Address:' : 'Alamat Gedung:'}
+                      </strong>
+                      <span>Botani Square Mall Lt.2, Jl. Pajajaran, Bogor Tengah (Depan Tugu Kujang)</span>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <MessageSquare className="w-5 h-5 text-[#2C4A3E] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-stone-900 block font-semibold">WhatsApp Resmi:</strong>
+                      <strong className="text-stone-900 block font-semibold">
+                        {language === 'en' ? 'Official WhatsApp:' : 'WhatsApp Resmi:'}
+                      </strong>
                       <a 
                         href="https://wa.me/628111330659" 
                         target="_blank" 
@@ -402,7 +390,9 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                   <div className="flex items-start gap-3">
                     <Phone className="w-5 h-5 text-[#B89753] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-stone-900 block font-semibold">Telepon Kantor:</strong>
+                      <strong className="text-stone-900 block font-semibold">
+                        {language === 'en' ? 'Office Telephone:' : 'Telepon Kantor:'}
+                      </strong>
                       <a href="tel:02518400659" className="text-stone-700 hover:text-stone-900 font-mono">
                         0251 8400 659
                       </a>
@@ -412,7 +402,9 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                   <div className="flex items-start gap-3">
                     <Mail className="w-5 h-5 text-[#B89753] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-stone-900 block font-semibold">Email Resmi:</strong>
+                      <strong className="text-stone-900 block font-semibold">
+                        {language === 'en' ? 'Official Email:' : 'Email Resmi:'}
+                      </strong>
                       <a href="mailto:sm@ipbicc.com" className="text-stone-700 hover:text-stone-900 font-mono">
                         sm@ipbicc.com
                       </a>
@@ -422,8 +414,14 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                   <div className="flex items-start gap-3">
                     <Building2 className="w-5 h-5 text-[#2C4A3E] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-stone-900 block font-semibold">Status Entitas:</strong>
-                      <span>Unit Bisnis Strategis BLST (PT Bogor Life Science and Technology - Holding IPB University)</span>
+                      <strong className="text-stone-900 block font-semibold">
+                        {language === 'en' ? 'Entity Status:' : 'Status Entitas:'}
+                      </strong>
+                      <span>
+                        {language === 'en'
+                          ? 'Strategic Business Unit of BLST (PT Bogor Life Science and Technology - IPB University Holding)'
+                          : 'Unit Bisnis Strategis BLST (PT Bogor Life Science and Technology - Holding IPB University)'}
+                      </span>
                     </div>
                   </div>
 
@@ -435,16 +433,16 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
             <div className="bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#B89753] mb-4">
                 <HelpCircle className="w-4 h-4 text-[#2C4A3E]" />
-                <span>Pertanyaan Sering Diajukan</span>
+                <span>{t.faqTitle}</span>
               </div>
 
               <div className="space-y-3">
-                {FAQS.map((faq, idx) => (
+                {faqs.map((faq, idx) => (
                   <div key={idx} className="border-b border-stone-100 pb-3 last:border-0 last:pb-0">
                     <button
                       type="button"
                       onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
-                      className="w-full text-left font-display text-sm font-semibold text-[#1A1E24] hover:text-[#B89753] transition-colors flex justify-between items-center gap-2"
+                      className="w-full text-left text-sm font-semibold text-[#1A1E24] hover:text-[#B89753] transition-colors flex justify-between items-center gap-2"
                     >
                       <span>{faq.question}</span>
                       <span className="text-[#B89753] font-mono text-base font-bold">
@@ -452,7 +450,7 @@ Mohon konfirmasi dan jadwalkan sesi survei lokasi di IICC Botani Square Lt.2. Te
                       </span>
                     </button>
                     {expandedFaq === idx && (
-                      <p className="text-xs text-stone-600 mt-2 leading-relaxed font-body">
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed font-normal">
                         {faq.answer}
                       </p>
                     )}
