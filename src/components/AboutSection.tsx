@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin, Hotel, ShieldCheck, Clock, Building, Compass, Sparkles } from 'lucide-react';
 import aboutHotelImg from '../assets/images/regenerated_image_1790563028677.jpg';
 import aboutMallImg from '../assets/images/regenerated_image_1790563026163.jpg';
+import aboutAccessImg from '../assets/images/regenerated_image_1791253326378.jpg';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -167,8 +168,8 @@ export const AboutSection: React.FC = () => {
 
           <div className="group relative rounded-xl overflow-hidden border border-stone-200 bg-white h-48 shadow-sm hover:shadow-md transition-all duration-300">
             <img
-              src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=800&q=80"
-              alt="Lobby & Pre-function Area"
+              src={aboutAccessImg}
+              alt="Tol Jagorawi & DAMRI Shelter Akses Cepat"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/40 to-transparent p-5 flex flex-col justify-end">
