@@ -88,9 +88,6 @@ export const FacilitiesSection: React.FC<FacilitiesSectionProps> = ({ onSelectFa
                       <span className="text-xl sm:text-2xl font-display font-bold text-white drop-shadow-md">
                         {facility.name}
                       </span>
-                      <span className="text-xs uppercase tracking-wider text-[#B89753] font-bold bg-black/70 px-2 py-0.5 rounded backdrop-blur-sm">
-                        {layoutLabels[selectedLayout]} Ready
-                      </span>
                     </div>
                     <p className="text-xs text-stone-200 mt-1 drop-shadow">
                       Konfigurasi fleksibel untuk format seated maupun standing reception

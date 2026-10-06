@@ -22,7 +22,10 @@ export const AboutSection: React.FC = () => {
             “Mewujudkan panggung bermakna untuk momen paling berarti.”
           </p>
           <p className="text-base text-stone-600 leading-relaxed font-body">
-            Sebagai unit bisnis strategis PT Bogor Life Science and Technology (BLST Holding IPB University), IPB International Convention Center (IICC) telah lama menjadi ikon keunggulan penyelenggaraan MICE (Meetings, Incentives, Conferences, Exhibitions) dan resepsi pernikahan prestisius di Jawa Barat.
+            Hadir di jantung Kota Bogor, tepat di depan ikonik Tugu Kujang dan hanya beberapa langkah dari Botani Square. IICC menghadirkan venue eksklusif dengan fasilitas berkelas yang dirancang untuk menyempurnakan setiap momen istimewa.
+            <span className="block mt-3">
+              Terintegrasi langsung dengan IPB Convention Hotel, IICC menawarkan pengalaman acara yang seamless, mulai dari pertemuan bisnis, konferensi, hingga perayaan acara pernikahan yang tak terlupakan.
+            </span>
           </p>
         </div>
 

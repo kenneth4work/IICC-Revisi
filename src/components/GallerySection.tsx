@@ -77,12 +77,8 @@ export const GallerySection: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Bottom title & capacity inside preview */}
+                {/* Bottom title inside preview */}
                 <div className="relative z-10 p-5 pt-0">
-                  <span className="text-[11px] font-mono text-[#F4F1EA] flex items-center gap-1.5 mb-1.5 bg-black/60 backdrop-blur-sm w-fit px-2 py-0.5 rounded">
-                    <Users className="w-3 h-3 text-[#B89753]" />
-                    <span>{item.capacity}</span>
-                  </span>
                   <h3 className="font-display text-lg font-bold text-white group-hover:text-[#B89753] transition-colors drop-shadow">
                     {item.title}
                   </h3>

@@ -52,9 +52,6 @@ export const Footer: React.FC = () => {
                 <a href="#klien" className="text-stone-600 hover:text-[#B89753] transition-colors">Klien Terpercaya</a>
               </li>
               <li>
-                <a href="#galeri" className="text-stone-600 hover:text-[#B89753] transition-colors">Galeri Dokumentasi</a>
-              </li>
-              <li>
                 <a href="#kontak" className="text-stone-600 hover:text-[#B89753] transition-colors">Formulir Konsultasi & Kontak</a>
               </li>
             </ul>

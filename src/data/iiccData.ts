@@ -1,5 +1,8 @@
 import facilityImg1 from '../assets/images/regenerated_image_1790562987470.jpg';
 import facilityImg2 from '../assets/images/regenerated_image_1790562989499.jpg';
+import facilityImg3 from '../assets/images/regenerated_image_1791252683698.jpg';
+import serviceImg1 from '../assets/images/regenerated_image_1791252688283.jpg';
+import serviceImg2 from '../assets/images/regenerated_image_1791252692162.jpg';
 import serviceImg3 from '../assets/images/regenerated_image_1790563003530.jpg';
 import serviceImg4 from '../assets/images/regenerated_image_1790563010347.jpg';
 import galleryImg1 from '../assets/images/regenerated_image_1790563011987.jpg';
@@ -95,7 +98,7 @@ export const FACILITIES: FacilityItem[] = [
     id: 'meeting-rooms',
     name: 'Meeting Room Suites',
     subtitle: 'Rangkaian Unit Meeting Room dengan High-Speed WiFi',
-    image: 'https://images.unsplash.com/photo-1431540015161-0bf866a2d407?auto=format&fit=crop&w=1200&q=80',
+    image: facilityImg3,
     capacityRange: 'Kapasitas Eksekutif',
     areaSize: 'Suites Eksklusif',
     ceilingHeight: 'Plafon Modern Nyaman',
@@ -123,7 +126,7 @@ export const SERVICES: ServiceItem[] = [
     number: 'MICE',
     title: 'Meeting & Convention',
     tagline: 'Standar Internasional untuk Rapat Kerja & Simposium',
-    image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1000&q=80',
+    image: serviceImg1,
     description: 'Pusat konvensi terakreditasi untuk penyelenggaraan konferensi internasional, rapat kementerian, simposium akademik, dan seminar nasional dengan dukungan teknis audio-visual kelas industri.',
     features: [
       'Peralatan Hybrid Meeting & Live Streaming multi-kamera',
@@ -137,7 +140,7 @@ export const SERVICES: ServiceItem[] = [
     number: 'WED',
     title: 'Wedding & Resepsi',
     tagline: 'Panggung Mewah untuk Janji Suci Seumur Hidup',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80',
+    image: serviceImg2,
     description: 'Wujudkan pernikahan impian dalam balutan kemewahan Ballroom megah berkapasitas besar. Dilengkapi ruang rias mewah, karpet merah eksklusif, serta koordinasi profesional untuk vendor dekorasi dan dokumentasi.',
     features: [
       'Pilihan paket Wedding All-In atau Venue-Only',

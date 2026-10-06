@@ -11,7 +11,6 @@ import { AboutSection } from './components/AboutSection';
 import { FacilitiesSection } from './components/FacilitiesSection';
 import { ServicesSection } from './components/ServicesSection';
 import { ClientsSection } from './components/ClientsSection';
-import { GallerySection } from './components/GallerySection';
 import { BookingFormSection } from './components/BookingFormSection';
 import { Footer } from './components/Footer';
 import { MessageSquare } from 'lucide-react';
@@ -63,9 +62,6 @@ export default function App() {
 
         {/* 7. Klien Terpercaya (Clients) */}
         <ClientsSection />
-
-        {/* Gallery Section */}
-        <GallerySection />
 
         {/* 8. CTA Band & Contact Form */}
         <BookingFormSection 

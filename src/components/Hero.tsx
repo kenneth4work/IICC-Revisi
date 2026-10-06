@@ -46,8 +46,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
         </h1>
 
         {/* Sub-headline */}
-        <p className="font-body text-base sm:text-xl text-stone-600 max-w-2xl text-balance font-normal leading-relaxed mb-10">
-          Pusat konvensi & pernikahan bergengsi di jantung Kota Bogor — pilihan utama kementerian, korporasi nasional, dan resepsi megah keluarga terhormat.
+        <p className="font-body text-base sm:text-xl text-stone-600 max-w-3xl text-balance font-normal leading-relaxed mb-10">
+          Pusat konvensi &amp; pernikahan bergengsi di jantung Kota Bogor - Pusat MICE &amp; Wedding Venue prestisius dan eksklusif di jantung Kota Bogor
         </p>
 
         {/* CTA Decision Block */}
