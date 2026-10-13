@@ -125,12 +125,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
             <div className="pt-2 flex flex-col gap-2">
               <a
-                href="https://wa.me/628111330659"
+                href="https://wa.me/6281519405"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs text-[#2C4A3E] font-medium hover:underline flex items-center gap-1.5 py-1"
               >
-                <span>WhatsApp: 0811 1330 659</span>
+                <span>WhatsApp: 0815 1940 5</span>
               </a>
               <a
                 href="tel:02518400659"

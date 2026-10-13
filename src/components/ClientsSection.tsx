@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { getClients, getTestimonials } from '../data/iiccData';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
-import { ShieldCheck, Quote, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ClientLogo } from './ClientLogo';
 
 export const ClientsSection: React.FC = () => {
   const { language } = useLanguage();
@@ -47,11 +48,15 @@ export const ClientsSection: React.FC = () => {
               key={idx}
               className="p-5 rounded-xl bg-white border border-stone-200 hover:border-[#B89753]/50 transition-all flex flex-col justify-between shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:shadow-md"
             >
-              <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center justify-between mb-4">
                 <span className="font-mono text-xs font-bold text-[#A38139] tracking-wider">
                   {client.abbreviation}
                 </span>
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#2C4A3E]" />
+                <ClientLogo 
+                  abbreviation={client.abbreviation} 
+                  name={client.name} 
+                  className="w-12 h-12 sm:w-14 sm:h-14 shrink-0" 
+                />
               </div>
               <div>
                 <h3 className="text-sm sm:text-base font-semibold text-[#1A1E24] leading-snug">

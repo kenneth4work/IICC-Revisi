@@ -66,7 +66,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="#kontak" className="text-stone-600 hover:text-[#B89753] transition-colors">
-                  {language === 'en' ? 'Consultation & Inquiry' : 'Formulir Konsultasi & Kontak'}
+                  {language === 'en' ? 'Official Contacts & Location' : 'Kontak & Lokasi Resmi'}
                 </a>
               </li>
             </ul>

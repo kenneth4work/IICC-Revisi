@@ -9,57 +9,28 @@ interface FacilitiesSectionProps {
   onSelectFacility: (facilityName: string) => void;
 }
 
-type LayoutType = 'theater' | 'classroom' | 'roundTable' | 'uShape';
-
 export const FacilitiesSection: React.FC<FacilitiesSectionProps> = ({ onSelectFacility }) => {
   const { language } = useLanguage();
   const t = translations[language].facilities;
   const facilities = getFacilities(language);
 
-  const [selectedLayout, setSelectedLayout] = useState<LayoutType>('theater');
   const [activeModalFacility, setActiveModalFacility] = useState<FacilityItem | null>(null);
-
-  const layoutLabels = t.layouts;
 
   return (
     <section id="fasilitas" className="py-24 bg-white text-stone-900 border-b border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div className="mb-14">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#B89753] mb-3">
               <span>{t.eyebrow}</span>
               <span aria-hidden="true">·</span>
               <span className="text-[#2C4A3E]">{t.eyebrowSub}</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] mb-3 text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] text-balance">
               {t.title}
             </h2>
-            <p className="text-base text-stone-600 leading-relaxed font-normal">
-              {t.subtitle}
-            </p>
-          </div>
-
-          {/* Interactive Layout Filter */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-            <span className="text-xs text-stone-500 font-medium whitespace-nowrap">{t.layoutMode}</span>
-            <div className="inline-flex p-1 bg-[#FAF8F5] border border-stone-200 rounded-lg">
-              {(Object.keys(layoutLabels) as LayoutType[]).map((type) => (
-                <button
-                  key={type}
-                  type="button"
-                  onClick={() => setSelectedLayout(type)}
-                  className={`px-3.5 py-1.5 text-xs font-medium rounded-md transition-colors whitespace-nowrap ${
-                    selectedLayout === type
-                      ? 'bg-[#1A1E24] text-white font-semibold shadow-sm'
-                      : 'text-stone-600 hover:text-stone-900 hover:bg-white'
-                  }`}
-                >
-                  {layoutLabels[type]}
-                </button>
-              ))}
-            </div>
           </div>
         </div>
 
@@ -89,35 +60,15 @@ export const FacilitiesSection: React.FC<FacilitiesSectionProps> = ({ onSelectFa
                         {facility.name}
                       </span>
                     </div>
-                    <p className="text-xs text-stone-200 mt-1 drop-shadow">
-                      {t.bannerTag}
-                    </p>
                   </div>
                 </div>
 
                 {/* Content Details */}
                 <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between bg-white">
                   <div>
-                    <h3 className="text-2xl font-bold text-[#1A1E24] group-hover:text-[#B89753] transition-colors">
+                    <h3 className="text-2xl font-bold text-[#1A1E24] group-hover:text-[#B89753] transition-colors mb-4">
                       {facility.name}
                     </h3>
-                    <p className="text-xs font-semibold text-[#A38139] mt-1 mb-4">
-                      {facility.subtitle}
-                    </p>
-                    
-                    <p className="text-sm text-stone-600 leading-relaxed mb-6 font-normal">
-                      {facility.description}
-                    </p>
-
-                    {/* Key feature list */}
-                    <div className="space-y-2 mb-6">
-                      {facility.highlightSpecs.slice(0, 3).map((spec, i) => (
-                        <div key={i} className="flex items-start gap-2 text-xs text-stone-600">
-                          <span className="text-[#B89753] font-bold mt-0.5">•</span>
-                          <span>{spec}</span>
-                        </div>
-                      ))}
-                    </div>
                   </div>
 
                   {/* Actions Bar */}

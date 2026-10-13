@@ -41,7 +41,7 @@ function AppContent() {
     scrollToContact();
   };
 
-  const waUrl = `https://wa.me/628111330659?text=${encodeURIComponent(t.floatingWa.waMessage)}`;
+  const waUrl = `https://wa.me/6281519405?text=${encodeURIComponent(t.floatingWa.waMessage)}`;
 
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-stone-900 flex flex-col font-sans selection:bg-[#B89753]/20 selection:text-stone-900">

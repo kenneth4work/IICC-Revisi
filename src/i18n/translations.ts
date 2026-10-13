@@ -116,7 +116,7 @@ export const translations = {
     clients: {
       eyebrow: 'Klien Terpercaya',
       eyebrowSub: 'Kredibilitas Teruji',
-      title: 'Dipercaya Lembaga Negara, BUMN, & Klien Swasta',
+      title: 'Klien Kami',
       subtitle: 'Berbagai institusi kementerian, perusahaan multinasional, serta keluarga pengantin telah mempercayakan panggung momen penting mereka kepada IICC.',
       testiBadge: 'Kesan Klien Kami',
       moreClients: '+ 500 Agenda Resmi Setiap Tahun',
@@ -322,7 +322,7 @@ export const translations = {
     clients: {
       eyebrow: 'Trusted Clients',
       eyebrowSub: 'Proven Credibility',
-      title: 'Trusted by State Ministries, SOEs & Prestigious Clients',
+      title: 'Our Clients',
       subtitle: 'Ministries, multinational enterprises, and discerning families entrust their most momentous occasions to IICC.',
       testiBadge: 'Client Testimonials',
       moreClients: '+ 500 Official Events Hosted Annually',
