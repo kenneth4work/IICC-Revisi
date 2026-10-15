@@ -23,11 +23,6 @@ export const FacilitiesSection: React.FC<FacilitiesSectionProps> = ({ onSelectFa
         {/* Section Header */}
         <div className="mb-14">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#B89753] mb-3">
-              <span>{t.eyebrow}</span>
-              <span aria-hidden="true">·</span>
-              <span className="text-[#2C4A3E]">{t.eyebrowSub}</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] text-balance">
               {t.title}
             </h2>

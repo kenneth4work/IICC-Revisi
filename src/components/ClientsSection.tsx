@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { getClients, getTestimonials } from '../data/iiccData';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
-import { ShieldCheck, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { ClientLogo } from './ClientLogo';
 
 export const ClientsSection: React.FC = () => {
@@ -22,17 +22,11 @@ export const ClientsSection: React.FC = () => {
   };
 
   return (
-    <section id="klien" className="py-24 bg-[#FAF8F5] text-stone-900 border-b border-stone-200">
+    <section id="klien" className="py-24 bg-white text-stone-900 border-b border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#B89753] mb-3">
-            <ShieldCheck className="w-4 h-4 text-[#2C4A3E]" />
-            <span>{t.eyebrow}</span>
-            <span aria-hidden="true">·</span>
-            <span className="text-[#2C4A3E]">{t.eyebrowSub}</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] mb-4 text-balance">
             {t.title}
           </h2>
@@ -75,10 +69,10 @@ export const ClientsSection: React.FC = () => {
               {language === 'en' ? '500+ Official Events' : '500+ Acara Resmi'}
             </span>
             <p className="text-xs text-stone-800 font-semibold mt-1">
-              {language === 'en' ? 'Annually Hosted' : 'Terselenggara Sukses'}
+              {language === 'en' ? 'Successfully Hosted' : 'Terselenggara Sukses'}
             </p>
             <p className="text-[10px] text-stone-500 mt-0.5">
-              {language === 'en' ? 'MICE, Symposia & Royal Weddings' : 'MICE, Simposium & Wedding Megah'}
+              {language === 'en' ? 'Meetings, Conferences, and Weddings' : 'Pertemuan, Konferensi, dan Pernikahan'}
             </p>
           </div>
         </div>
@@ -99,7 +93,9 @@ export const ClientsSection: React.FC = () => {
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-xs uppercase tracking-widest text-[#B89753] font-semibold">
-                {language === 'en' ? 'Client Experience' : 'Bukti Pengalaman Klien'} ({testimonials[activeTestimonial].event})
+                {language === 'en' 
+                  ? 'CLIENT EXPERIENCE (NATIONAL COORDINATION MEETING)' 
+                  : 'PENGALAMAN KLIEN (RAPAT KOORDINASI NASIONAL)'}
               </span>
               <span className="px-2.5 py-0.5 rounded bg-[#2C4A3E]/10 border border-[#2C4A3E]/20 text-[10px] text-[#2C4A3E] font-medium">
                 Verified Event

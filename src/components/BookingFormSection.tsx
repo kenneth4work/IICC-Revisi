@@ -38,16 +38,11 @@ export const BookingFormSection: React.FC<BookingFormSectionProps> = ({
   const waUrl = `https://wa.me/628111330659?text=${encodeURIComponent(getWaMessage())}`;
 
   return (
-    <section id="kontak" className="py-24 bg-[#FAF8F5] text-stone-900 border-b border-stone-200 relative">
+    <section id="kontak" className="py-24 bg-white text-stone-900 border-b border-stone-200 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Top Header */}
         <div className="max-w-3xl mb-16">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#B89753] mb-3">
-            <span>{t.eyebrow}</span>
-            <span aria-hidden="true">·</span>
-            <span className="text-[#2C4A3E]">{t.eyebrowSub}</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] mb-4 text-balance">
             {t.title}
           </h2>
@@ -136,12 +131,12 @@ export const BookingFormSection: React.FC<BookingFormSectionProps> = ({
                   <Building2 className="w-5 h-5 text-[#2C4A3E] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-stone-900 block font-semibold">
-                      {language === 'en' ? 'Entity Status:' : 'Status Entitas:'}
+                      {language === 'en' ? 'Business Unit:' : 'Unit Bisnis:'}
                     </strong>
                     <span>
                       {language === 'en'
-                        ? 'Strategic Business Unit of BLST (PT Bogor Life Science and Technology - IPB University Holding)'
-                        : 'Unit Bisnis Strategis BLST (PT Bogor Life Science and Technology - Holding IPB University)'}
+                        ? 'BLST (PT Bogor Life Science and Technology – IPB University Holding Company)'
+                        : 'BLST (PT Bogor Life Science and Technology – IPB University Holding Company)'}
                     </span>
                   </div>
                 </div>

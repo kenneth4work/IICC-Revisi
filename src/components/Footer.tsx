@@ -51,22 +51,22 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="#fasilitas" className="text-stone-600 hover:text-[#B89753] transition-colors">
-                  {language === 'en' ? 'Venues & Ballrooms' : 'Fasilitas & Ballroom'}
+                  {language === 'en' ? 'Facilities & Ballrooms' : 'Fasilitas & Ballroom'}
                 </a>
               </li>
               <li>
                 <a href="#layanan" className="text-stone-600 hover:text-[#B89753] transition-colors">
-                  {language === 'en' ? 'Services & Solutions' : 'Layanan & Solusi Terpadu'}
+                  {language === 'en' ? 'Services & Event Solutions' : 'Layanan & Solusi Acara'}
                 </a>
               </li>
               <li>
                 <a href="#klien" className="text-stone-600 hover:text-[#B89753] transition-colors">
-                  {language === 'en' ? 'Trusted Clients' : 'Klien Terpercaya'}
+                  {language === 'en' ? 'Our Clients' : 'Klien Kami'}
                 </a>
               </li>
               <li>
                 <a href="#kontak" className="text-stone-600 hover:text-[#B89753] transition-colors">
-                  {language === 'en' ? 'Official Contacts & Location' : 'Kontak & Lokasi Resmi'}
+                  {language === 'en' ? 'Inquiry Form & Contact' : 'Formulir Inquiry & Kontak'}
                 </a>
               </li>
             </ul>
@@ -81,11 +81,15 @@ export const Footer: React.FC = () => {
             <div className="space-y-2.5 text-xs text-stone-600">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#B89753] shrink-0 mt-0.5" />
-                <span>Botani Square Mall Lt.2, Jl. Pajajaran, Bogor Tengah (Depan Tugu Kujang)</span>
+                <span>
+                  {language === 'en'
+                    ? 'Botani Square Mall, 2nd Floor, Jl. Pajajaran, Central Bogor (Across from Tugu Kujang)'
+                    : 'Botani Square Mall Lt.2, Jl. Pajajaran, Bogor Tengah (Seberang Tugu Kujang)'}
+                </span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#B89753] shrink-0" />
-                <span>Telp / WA: 0811 1330 659 / 0251 8400 659</span>
+                <span>Phone / WhatsApp: 0811 1330 659 / 0251 8400 659</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#B89753] shrink-0" />
@@ -104,7 +108,7 @@ export const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-[11px] text-[#A38139] hover:text-[#B89753] font-semibold"
               >
-                <span>{language === 'en' ? 'Open Directions in Google Maps →' : 'Buka Petunjuk Arah di Google Maps →'}</span>
+                <span>{language === 'en' ? 'Get Directions on Google Maps →' : 'Buka Petunjuk Arah di Google Maps →'}</span>
               </a>
             </div>
           </div>
@@ -114,7 +118,7 @@ export const Footer: React.FC = () => {
         {/* Bottom copyright & attribution */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[11px] text-stone-500">
-            © IPB International Convention Center (BLST Holding IPB University). {t.copyright}
+            © IPB International Convention Center (BLST, IPB University Holding Company). {language === 'en' ? 'All rights reserved.' : 'Hak cipta dilindungi undang-undang.'}
           </p>
 
           <button

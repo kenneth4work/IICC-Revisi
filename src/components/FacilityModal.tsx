@@ -127,7 +127,7 @@ export const FacilityModal: React.FC<FacilityModalProps> = ({
                   {language === 'en' ? 'Standing Reception:' : 'Standing Reception:'}
                 </span>
                 <p className="font-bold text-[#1A1E24] text-sm mt-1">
-                  {language === 'en' ? 'Grand Standing Format' : 'Format Resepsi Berdiri Megah'}
+                  {language === 'en' ? 'Standing Events' : 'Format Resepsi Berdiri'}
                 </p>
               </div>
             </div>

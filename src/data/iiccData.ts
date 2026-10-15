@@ -1,13 +1,19 @@
-import facilityImg1 from '../assets/images/regenerated_image_1790562987470.jpg';
-import facilityImg2 from '../assets/images/regenerated_image_1790562989499.jpg';
-import facilityImg3 from '../assets/images/regenerated_image_1791252683698.jpg';
+import { Language } from '../context/LanguageContext';
+import facilityImg1 from '../assets/images/regenerated_image_1790563011987.jpg';
+import facilityImg2 from '../assets/images/regenerated_image_1790562987470.jpg';
+import facilityImg3 from '../assets/images/regenerated_image_1790562989499.jpg';
 import serviceImg1 from '../assets/images/regenerated_image_1791252688283.jpg';
 import serviceImg2 from '../assets/images/regenerated_image_1791252692162.jpg';
-import serviceImg3 from '../assets/images/regenerated_image_1790563003530.jpg';
-import serviceImg4 from '../assets/images/regenerated_image_1790563010347.jpg';
-import galleryImg1 from '../assets/images/regenerated_image_1790563011987.jpg';
+import serviceImg3 from '../assets/images/regenerated_image_1790563010347.jpg';
+import serviceImg4 from '../assets/images/regenerated_image_1791252683698.jpg';
 
-export type Language = 'id' | 'en';
+export interface FacilityLayouts {
+  theater: number;
+  classroom: number;
+  roundTable: number;
+  uShape: number;
+  standing: number;
+}
 
 export interface FacilityItem {
   id: string;
@@ -20,13 +26,7 @@ export interface FacilityItem {
   idealFor: string[];
   description: string;
   highlightSpecs: string[];
-  layouts: {
-    theater: number;
-    classroom: number;
-    roundTable: number;
-    uShape: number;
-    standing: number;
-  };
+  layouts: FacilityLayouts;
 }
 
 export interface ServiceItem {
@@ -51,57 +51,55 @@ export const getFacilities = (lang: Language = 'id'): FacilityItem[] => {
       {
         id: 'grand-ballroom',
         name: 'Grand Ballroom',
-        subtitle: 'Pillar-less Iconic Venue for Large-Scale Events',
+        subtitle: 'Spacious Hall',
         image: facilityImg1,
-        capacityRange: 'Grand Capacity',
-        areaSize: 'Spacious Grand Hall',
-        ceilingHeight: 'Majestic High Ceiling',
-        idealFor: ['Grand Wedding Receptions', 'University Commencements', 'International Conferences', 'State & Corporate Galas'],
-        description: 'An architectural masterpiece featuring a pillar-less hall with theater-grade acoustics. Equipped with intelligent lighting arrays, a permanent elegant stage, and a direct grand foyer to warmly welcome VIP delegates and esteemed guests.',
+        capacityRange: 'Large Events',
+        areaSize: 'Spacious Hall',
+        ceilingHeight: 'High Ceiling',
+        idealFor: ['Large Wedding Receptions', 'Graduations', 'International Conferences'],
+        description: 'A large, pillar-free hall with clear sound throughout the room. It features adjustable lighting, a permanent stage, and a spacious foyer where guests can gather before the event.',
         highlightSpecs: [
-          'Pillar-less Architecture ensuring 100% unobstructed sightlines',
-          'Integrated High-Definition Audio Visual & Concert Stage Lighting',
-          'Giant Indoor LED Videowall with ultra-crisp resolution',
-          'Direct VIP Loading Dock & Dedicated Escalator Access',
-          'Private VIP Holding Lounge & Exclusive Bridal Dressing Suites',
+          'Pillar-Free Design for Clear Views',
+          'High-Definition Sound, Video, and Stage Lighting',
+          'Large Indoor LED Screen',
+          'VIP Loading Access and Dedicated Escalator',
+          'Separate VIP Waiting Room and Bridal Preparation Room',
         ],
         layouts: { theater: 0, classroom: 0, roundTable: 0, uShape: 0, standing: 0 },
       },
       {
         id: 'ballroom-flexi',
-        name: 'Modular Ballroom',
-        subtitle: 'Flexible Configuration Units for Versatile Functions',
+        name: 'Ballroom',
+        subtitle: 'Medium-Sized Space',
         image: facilityImg2,
         capacityRange: 'Flexible Capacity',
-        areaSize: 'Mid-scale Hall Configurations',
-        ceilingHeight: 'Acoustic Comfort Ceiling',
-        idealFor: ['Corporate Gatherings', 'National Seminars', 'Intimate Weddings', 'Product Launches'],
-        description: 'A modular ballroom designed for independent sessions or unified hall setups using acoustic movable partitions. The ideal balance between privacy, prestige, and flexible seating layouts.',
+        areaSize: 'Medium-Sized Space',
+        ceilingHeight: 'Comfortable Acoustic Ceiling',
+        idealFor: ['Corporate Gatherings', 'National Seminars', 'Small and Modern Weddings', 'Product Launches'],
+        description: 'Flexible ballroom spaces that can be used separately or combined using movable soundproof walls. Suitable for medium-sized events that need a private setting.',
         highlightSpecs: [
-          'Acoustic-rated Moveable Partition Soundproof Isolation',
-          'Independent Digital Audio Consoles & Wireless Mic Systems',
-          'Dual High-Lumen Laser Projectors & Motorized Dropdown Screens',
-          'Adaptive Layout Setups (Round Table, Classroom, Theater)',
-          'Integrated Private Foyer for Coffee Breaks & Registration',
+          'Movable Soundproof Walls',
+          'Separate Sound Systems and Wireless Microphones',
+          'Two Bright Projectors with Retractable Screens',
+          'Flexible Seating Arrangements (Round Table, Classroom, Theater, U-Shape, etc.)',
+          'Foyer Area for Coffee Breaks and Registration',
         ],
         layouts: { theater: 0, classroom: 0, roundTable: 0, uShape: 0, standing: 0 },
       },
       {
         id: 'meeting-rooms',
-        name: 'Meeting Room Suites',
-        subtitle: 'Executive Meeting Room Suites with High-Speed WiFi',
+        name: 'Meeting Room',
+        subtitle: 'Private Meeting Rooms',
         image: facilityImg3,
-        capacityRange: 'Executive Capacity',
-        areaSize: 'Exclusive Executive Suites',
-        ceilingHeight: 'Modern Ergonomic Ceiling',
-        idealFor: ['Ministerial Workgroups', 'Board of Directors Meetings', 'Focus Group Discussions', 'Executive Workshops'],
-        description: 'A collection of executive meeting rooms engineered ergonomically with whisper-quiet central climate control, balanced natural lighting, and enterprise-grade dedicated high-speed internet.',
+        capacityRange: 'Small Group Meetings',
+        areaSize: 'Private Meeting Rooms',
+        ceilingHeight: 'Comfortable Modern Design',
+        idealFor: ['Government Meetings', 'Board Meetings', 'Focus Group Discussions', 'Training & Workshops'],
+        description: 'Meeting rooms designed for comfort and focus, with quiet central air conditioning, balanced lighting, and fast internet access.',
         highlightSpecs: [
-          'Exclusive Suite Options: Salak, Pangrango, Kencana, Gede, etc.',
-          'Dedicated High-Speed Dedicated Fiber Optic WiFi',
-          'Interactive Smart Displays & Hybrid Conference Video Cameras',
-          'Ergonomic Executive Leather Chairs & Modular Conference Desks',
-          'On-demand Secretarial Support & Dedicated Event Concierge',
+          'Available Rooms: Meeting Rooms A, B, C, D, E & F',
+          'Dedicated High-Speed Wi-Fi',
+          'Interactive Display and Camera for Online Meetings',
         ],
         layouts: { theater: 0, classroom: 0, roundTable: 0, uShape: 0, standing: 0 },
       },
@@ -112,57 +110,55 @@ export const getFacilities = (lang: Language = 'id'): FacilityItem[] => {
     {
       id: 'grand-ballroom',
       name: 'Grand Ballroom',
-      subtitle: 'Pillar-less Iconic Venue untuk Skala Terbesar',
+      subtitle: 'Aula Sangat Luas Tanpa Tiang',
       image: facilityImg1,
-      capacityRange: 'Kapasitas Akbar',
+      capacityRange: 'Acara Skala Besar',
       areaSize: 'Aula Sangat Luas',
       ceilingHeight: 'Plafon Tinggi Megah',
-      idealFor: ['Resepsi Wedding Akbar', 'Wisuda Universitas', 'Konferensi Internasional', 'Gala Dinner BUMN'],
-      description: 'Mahakarya aula megah tanpa tiang (pillar-less) dengan akustik berstandar teater. Dilengkapi tata pencahayaan cerdas, panggung permanen elegan, serta akses pre-function foyer luas yang langsung menyambut para tamu terhormat.',
+      idealFor: ['Resepsi Pernikahan Akbar', 'Wisuda Universitas', 'Konferensi Internasional'],
+      description: 'Aula besar tanpa tiang dengan tata suara jernih di seluruh ruangan. Dilengkapi pencahayaan adaptif, panggung permanen, dan foyer luas tempat berkumpul sebelum acara.',
       highlightSpecs: [
-        'Pillar-less Architecture untuk pandangan penuh tanpa hambatan',
-        'Integrated High-Definition Audio Visual & Concert Lighting',
-        'Giant Indoor LED Videowall resolusi ultra tajam',
-        'Direct VIP Loading Dock & Dedicated Escalator Access',
-        'Separate VIP Holding Room & Ruang Rias Pengantin Eksklusif',
+        'Desain Tanpa Tiang untuk Pandangan Bebas Hambatan',
+        'Tata Suara, Video & Pencahayaan Panggung Definisi Tinggi',
+        'Layar LED Indoor Berukuran Besar',
+        'Akses Loading VIP & Eskalator Khusus',
+        'Ruang Tunggu VIP Terpisah & Ruang Persiapan Pengantin',
       ],
       layouts: { theater: 0, classroom: 0, roundTable: 0, uShape: 0, standing: 0 },
     },
     {
       id: 'ballroom-flexi',
       name: 'Ballroom',
-      subtitle: 'Pilihan Unit Flexible Configuration',
+      subtitle: 'Ruang Fleksibel Skala Menengah',
       image: facilityImg2,
       capacityRange: 'Kapasitas Fleksibel',
-      areaSize: 'Konfigurasi Menengah',
+      areaSize: 'Ruang Skala Menengah',
       ceilingHeight: 'Plafon Akustik Nyaman',
-      idealFor: ['Corporate Gathering', 'Seminar Nasional', 'Pernikahan Intim & Modern', 'Product Launching'],
-      description: 'Modul ballroom fleksibel yang dapat dikonfigurasi mandiri maupun digabung menggunakan moveable soundproof partition. Solusi sempurna untuk acara berskala menengah dengan privasi optimal.',
+      idealFor: ['Corporate Gathering', 'Seminar Nasional', 'Pernikahan Intim & Modern', 'Peluncuran Produk'],
+      description: 'Ruang ballroom fleksibel yang dapat digunakan terpisah maupun digabungkan dengan partisi kedap suara. Cocok untuk acara skala menengah yang membutuhkan suasana privat.',
       highlightSpecs: [
-        'Flexible Soundproof Partition Acoustic Isolation',
-        'Independent Digital Audio Mixers & Wireless Mic Systems',
-        'Dual High-Lumen Laser Projectors & Motorized Screens',
-        'Flexible Banquet Setup (Round Table, Classroom, Banquet)',
-        'Integrated Foyer untuk Coffee Break & Registration Desk',
+        'Dinding Partisi Bergerak Kedap Suara',
+        'Sistem Audio Mandiri & Mikrofon Nirkabel',
+        'Dua Proyektor Terang dengan Layar Otomatis',
+        'Penataan Tempat Duduk Fleksibel (Meja Bundar, Kelas, Teater, U-Shape)',
+        'Area Foyer untuk Coffee Break & Registrasi',
       ],
       layouts: { theater: 0, classroom: 0, roundTable: 0, uShape: 0, standing: 0 },
     },
     {
       id: 'meeting-rooms',
-      name: 'Meeting Room Suites',
-      subtitle: 'Rangkaian Unit Meeting Room dengan High-Speed WiFi',
+      name: 'Meeting Room',
+      subtitle: 'Rangkaian Ruang Rapat Privat',
       image: facilityImg3,
-      capacityRange: 'Kapasitas Eksekutif',
-      areaSize: 'Suites Eksklusif',
-      ceilingHeight: 'Plafon Modern Nyaman',
-      idealFor: ['Rapat Kerja Kementerian', 'Board of Directors Meeting', 'Focus Group Discussion', 'Training & Workshop'],
-      description: 'Rangkaian ruang pertemuan eksekutif dirancang ergonomis dengan pendingin udara sentral yang senyap, pencahayaan alami dan buatan yang seimbang, serta jaringan internet berkecepatan tinggi tanpa hambatan.',
+      capacityRange: 'Pertemuan Kelompok Kecil',
+      areaSize: 'Ruang Rapat Privat',
+      ceilingHeight: 'Desain Modern Nyaman',
+      idealFor: ['Rapat Pemerintah', 'Rapat Direksi', 'Focus Group Discussion', 'Pelatihan & Workshop'],
+      description: 'Ruang pertemuan yang dirancang untuk kenyamanan dan fokus, dengan AC sentral yang tenang, pencahayaan seimbang, dan akses internet berkecepatan tinggi.',
       highlightSpecs: [
-        'Pilihan Unit Eksklusif: Salak, Pangrango, Kencana, Gede, dll.',
-        'Dedicated High-Speed Dedicated Fiber Optic WiFi',
-        'Interactive Smart Display & Hybrid Conference Camera',
-        'Ergonomic Leather Executive Chairs & Modular Tables',
-        'On-demand Secretarial & Meeting Concierge Support',
+        'Pilihan Ruang: Meeting Room A, B, C, D, E & F',
+        'Akses Wi-Fi Kecepatan Tinggi Terdedikasi',
+        'Layar Interaktif & Kamera untuk Pertemuan Online',
       ],
       layouts: { theater: 0, classroom: 0, roundTable: 0, uShape: 0, standing: 0 },
     },
@@ -174,59 +170,57 @@ export const getServices = (lang: Language = 'id'): ServiceItem[] => {
     return [
       {
         number: 'MICE',
-        title: 'Meeting & Convention',
-        tagline: 'International Standards for Corporate Meetings & Symposia',
+        title: 'Meetings & Conventions',
+        tagline: 'Spaces for Professional Meetings and Conferences',
         image: serviceImg1,
-        description: 'Accredited convention center for international conferences, ministerial workgroups, academic symposia, and national conventions with enterprise-grade audio-visual support.',
+        description: 'IICC hosts international conferences, government meetings, academic discussions, and national seminars, supported by professional audio and video equipment.',
         features: [
-          'Multi-camera Hybrid Meeting & Broadcast Live Streaming',
-          'State protocol VVIP transit & holding suite',
-          'Experienced on-site event coordinator team',
-          'Seamless accommodation at IPB Convention Hotel',
+          'Equipment for Hybrid Meetings and Multi-Camera Live Streaming',
+          'VIP Waiting Room for Official Guests',
+          'Easy Access to IPB Convention Hotel',
         ],
-        badge: 'MICE Excellence',
+        badge: 'Professional MICE',
       },
       {
         number: 'WED',
-        title: 'Weddings & Celebrations',
-        tagline: 'A Luxurious Stage for Once-in-a-Lifetime Vows',
+        title: 'Weddings & Receptions',
+        tagline: 'A Beautiful Setting for Your Special Day',
         image: serviceImg2,
-        description: 'Bring your dream wedding to life in the elegance of a grand pillar-less Ballroom. Featuring luxury dressing suites, VIP red-carpet arrival, and dedicated coordination with leading decoration vendors.',
+        description: 'Celebrate your wedding in a spacious ballroom, with bridal preparation rooms and support in coordinating decoration and photography vendors.',
         features: [
-          'All-Inclusive Wedding packages or Venue-Only rental options',
-          'Complimentary bridal suite at integrated IPB Convention Hotel',
-          'Concert-grade sound & dynamic stage lighting system',
-          'Direct VIP drop-off lobby from Botani Square',
+          'Package Options: Yasmine, Rose, Lilium',
+          'Bridal Suite at the Connected IPB Convention Hotel',
+          'Sound and Stage Lighting',
+          'Free Parking for the Couple and Family',
         ],
         badge: 'Dream Weddings',
       },
       {
         number: 'CHEF',
-        title: 'Gourmet Catering',
-        tagline: 'Authentic Indonesian & International Gastronomy',
+        title: 'Dining Experience',
+        tagline: 'Indonesian and International Menus',
         image: serviceImg3,
-        description: 'Crafted by our certified in-house culinary brigade under the highest hygiene standards. Featuring diverse buffet selections, signature food stalls, gourmet coffee breaks, and state banquets.',
+        description: 'Our in-house chefs prepare a range of menus, from buffet meals and coffee breaks to formal dining, with a focus on food safety and cleanliness.',
         features: [
-          'HACCP & Halal Compliant Certified Kitchen',
-          'Curated authentic Bogor, Indonesian Archipelago, Asian & Western menus',
-          'Live interactive cooking stations & artisan pastry dessert displays',
-          'Pre-event food tasting session for wedding couples & committees',
+          'Halal Certification and HACCP-Based Food Safety Practices',
+          'Menu Options from Bogor, Across Indonesia, Asia, and Western Cuisine',
+          'Live Cooking Stations and Dessert Displays',
+          'Pre-Event Food Tasting for Couples and Event Organizers',
         ],
-        badge: 'Culinary Mastery',
+        badge: 'Gourmet Dining',
       },
       {
         number: 'EXPO',
-        title: 'Exhibitions & Expos',
-        tagline: 'Strategic Exhibition Floor with High Public Footfall',
+        title: 'Exhibitions',
+        tagline: 'Flexible Exhibition Space with Easy Access',
         image: serviceImg4,
-        description: 'Expansive exhibition floors with heavy floor load capacity and distributed three-phase power infrastructure for education expos, career fairs, trade shows, and indoor automotive showcases.',
+        description: 'Spacious exhibition areas with floors designed for heavy equipment and convenient power connections, suitable for education expos, job fairs, book fairs, and small-business exhibitions.',
         features: [
-          'Spacious capacity for international standard modular exhibition booths',
-          'Direct heavy cargo loading dock access to the event floor',
-          'Integrated footfall with Botani Square Mall visitors',
-          'Comprehensive fire safety & 24/7 security protocol',
+          'Loading Access for Event Equipment and Deliveries',
+          'Easy Access for Botani Square Mall Visitors',
+          'Security and Fire Safety Systems',
         ],
-        badge: 'High Footfall Expo',
+        badge: 'Spacious Expo',
       },
     ];
   }
@@ -234,59 +228,57 @@ export const getServices = (lang: Language = 'id'): ServiceItem[] => {
   return [
     {
       number: 'MICE',
-      title: 'Meeting & Convention',
-      tagline: 'Standar Internasional untuk Rapat Kerja & Simposium',
+      title: 'Meetings & Conventions',
+      tagline: 'Ruang untuk Pertemuan Profesional dan Konferensi',
       image: serviceImg1,
-      description: 'Pusat konvensi terakreditasi untuk penyelenggaraan konferensi internasional, rapat kementerian, simposium akademik, dan seminar nasional dengan dukungan teknis audio-visual kelas industri.',
+      description: 'IICC menyelenggarakan konferensi internasional, pertemuan pemerintah, diskusi akademik, dan seminar nasional, didukung peralatan audio dan video profesional.',
       features: [
-        'Peralatan Hybrid Meeting & Live Streaming multi-kamera',
-        'Ruang VVIP transit protokol kenegaraan',
-        'Tim event coordinator berpengalaman',
-        'Kemudahan akomodasi di IPB Convention Hotel',
+        'Peralatan untuk Pertemuan Hybrid dan Live Streaming Multi-Kamera',
+        'Ruang Tunggu VIP untuk Tamu Resmi Kenegaraan',
+        'Akses Mudah Langsung ke IPB Convention Hotel',
       ],
-      badge: 'MICE Excellence',
+      badge: 'MICE Profesional',
     },
     {
       number: 'WED',
-      title: 'Wedding & Resepsi',
-      tagline: 'Panggung Mewah untuk Janji Suci Seumur Hidup',
+      title: 'Weddings & Receptions',
+      tagline: 'Suasana Indah untuk Hari Istimewa Anda',
       image: serviceImg2,
-      description: 'Wujudkan pernikahan impian dalam balutan kemewahan Ballroom megah berkapasitas besar. Dilengkapi ruang rias mewah, karpet merah eksklusif, serta koordinasi profesional untuk vendor dekorasi dan dokumentasi.',
+      description: 'Rayakan pernikahan Anda di ballroom luas, dilengkapi ruang persiapan pengantin dan dukungan koordinasi vendor dekorasi serta fotografi.',
       features: [
-        'Pilihan paket Wedding All-In atau Venue-Only',
-        'Kamar pengantin mewah di IPB Convention Hotel terintegrasi',
-        'Fasilitas Sound & Stage Lighting standar konser',
-        'Akses drop-off VIP langsung dari lobi Botani Square',
+        'Pilihan Paket: Yasmine, Rose, Lilium',
+        'Kamar Pengantin di IPB Convention Hotel yang Terkoneksi',
+        'Tata Suara dan Tata Cahaya Panggung Standar Konser',
+        'Parkir Gratis Khusus untuk Pengantin dan Keluarga',
       ],
-      badge: 'Dream Weddings',
+      badge: 'Pernikahan Impian',
     },
     {
       number: 'CHEF',
-      title: 'Katering Premium',
-      tagline: 'Cita Rasa Gastronomi Nusantara & Internasional',
+      title: 'Dining Experience',
+      tagline: 'Pilihan Menu Nusantara dan Internasional',
       image: serviceImg3,
-      description: 'Disiapkan oleh tim chef in-house bersertifikasi dengan standar kebersihan tertinggi. Menyajikan variasi kuliner prasmanan, gubukan istimewa, coffee break gourmet, hingga jamuan fine dining kenegaraan.',
+      description: 'Chef in-house kami menyiapkan beragam pilihan menu, mulai dari prasmanan dan coffee break hingga jamuan formal, dengan fokus pada keamanan dan kebersihan pangan.',
       features: [
-        'Sertifikasi Halal & Hygiene HACCP compliant',
-        'Koleksi menu otentik Bogor, Nusantara, Asian, & Western',
-        'Live cooking stations & dessert pastry display eksklusif',
-        'Food tasting session pra-acara bagi calon pengantin & panitia',
+        'Sertifikasi Halal dan Praktik Keamanan Pangan Berbasis HACCP',
+        'Pilihan Menu Khas Bogor, Nusantara, Asia, dan Hidangan Barat',
+        'Live Cooking Stations dan Sajian Aneka Dessert',
+        'Sesi Food Tasting Pra-Acara untuk Pengantin & Panitia',
       ],
-      badge: 'Culinary Mastery',
+      badge: 'Katering Gourmet',
     },
     {
       number: 'EXPO',
-      title: 'Exhibition & Pameran',
-      tagline: 'Lantai Pameran Strategis dengan Akses Terbuka',
+      title: 'Exhibitions',
+      tagline: 'Ruang Pameran Fleksibel dengan Akses Mudah',
       image: serviceImg4,
-      description: 'Ruang pameran luas dengan lantai berdaya dukung tinggi dan sistem kelistrikan terdistribusi untuk expo pendidikan, job fair nasional, pameran buku, pameran UMKM, hingga bursa otomotif indoor.',
+      description: 'Area pameran luas dengan lantai berdaya dukung tinggi dan koneksi listrik yang praktis, cocok untuk expo pendidikan, job fair, bursa buku, dan pameran UMKM.',
       features: [
-        'Kapasitas deretan booth modular standar internasional',
-        'Akses loading dock kontainer barang langsung ke lantai acara',
-        'Trafik pengunjung terintegrasi pengunjung Botani Square Mall',
-        'Sistem keamanan & proteksi kebakaran komprehensif',
+        'Akses Loading Dock untuk Peralatan dan Pengiriman Barang Acara',
+        'Akses Terbuka Langsung bagi Pengunjung Botani Square Mall',
+        'Sistem Keamanan Terpadu dan Proteksi Kebakaran Lengkap',
       ],
-      badge: 'High Footfall Expo',
+      badge: 'Pameran Luas',
     },
   ];
 };
@@ -294,22 +286,22 @@ export const getServices = (lang: Language = 'id'): ServiceItem[] => {
 export const getClients = (lang: Language = 'id'): ClientItem[] => {
   if (lang === 'en') {
     return [
-      { name: 'Ministry of Finance of the Republic of Indonesia', category: 'Ministries & State Institutions', abbreviation: 'KEMENKEU' },
-      { name: 'PT Pertamina (Persero)', category: 'State-Owned Enterprises', abbreviation: 'PERTAMINA' },
-      { name: 'Ministry of Marine Affairs and Fisheries', category: 'Ministries & State Institutions', abbreviation: 'KKP RI' },
-      { name: 'National Development Planning Agency (Bappenas)', category: 'Government Institutions', abbreviation: 'BAPPENAS' },
-      { name: 'Ministry of Forestry of the Republic of Indonesia', category: 'Ministries & State Institutions', abbreviation: 'KEMENHUT' },
-      { name: 'Ministry of Health of the Republic of Indonesia', category: 'Ministries & State Institutions', abbreviation: 'KEMENKES' },
-      { name: 'Bogor City Government', category: 'Regional Government', abbreviation: 'PEMKOT BOGOR' },
+      { name: 'Ministry of Finance, Republic of Indonesia', category: 'Government Ministry', abbreviation: 'KEMENKEU' },
+      { name: 'PT Pertamina (Persero)', category: 'State-Owned Company', abbreviation: 'PERTAMINA' },
+      { name: 'Ministry of Marine Affairs and Fisheries', category: 'Government Ministry', abbreviation: 'KKP RI' },
+      { name: 'Ministry of National Development Planning', category: 'Government Agency', abbreviation: 'BAPPENAS' },
+      { name: 'Ministry of Forestry, Republic of Indonesia', category: 'Government Ministry', abbreviation: 'KEMENHUT' },
+      { name: 'Ministry of Health, Republic of Indonesia', category: 'Government Ministry', abbreviation: 'KEMENKES' },
+      { name: 'Bogor City Government', category: 'Local Government', abbreviation: 'PEMKOT BOGOR' },
     ];
   }
   return [
-    { name: 'Kementerian Keuangan RI', category: 'Kementerian & Lembaga', abbreviation: 'KEMENKEU' },
-    { name: 'PT Pertamina (Persero)', category: 'Badan Usaha Milik Negara', abbreviation: 'PERTAMINA' },
-    { name: 'Kementerian Kelautan & Perikanan', category: 'Kementerian & Lembaga', abbreviation: 'KKP RI' },
-    { name: 'Badan Perencanaan Pembangunan Nasional', category: 'Lembaga Pemerintah', abbreviation: 'BAPPENAS' },
-    { name: 'Kementerian Kehutanan RI', category: 'Kementerian & Lembaga', abbreviation: 'KEMENHUT' },
-    { name: 'Kementerian Kesehatan RI', category: 'Kementerian & Lembaga', abbreviation: 'KEMENKES' },
+    { name: 'Kementerian Keuangan Republik Indonesia', category: 'Kementerian Pemerintah', abbreviation: 'KEMENKEU' },
+    { name: 'PT Pertamina (Persero)', category: 'Badan Usaha Milik Negara (BUMN)', abbreviation: 'PERTAMINA' },
+    { name: 'Kementerian Kelautan dan Perikanan', category: 'Kementerian Pemerintah', abbreviation: 'KKP RI' },
+    { name: 'Kementerian PPN / Bappenas', category: 'Lembaga Pemerintah', abbreviation: 'BAPPENAS' },
+    { name: 'Kementerian Kehutanan Republik Indonesia', category: 'Kementerian Pemerintah', abbreviation: 'KEMENHUT' },
+    { name: 'Kementerian Kesehatan Republik Indonesia', category: 'Kementerian Pemerintah', abbreviation: 'KEMENKES' },
     { name: 'Pemerintah Kota Bogor', category: 'Pemerintah Daerah', abbreviation: 'PEMKOT BOGOR' },
   ];
 };
@@ -318,49 +310,21 @@ export const getTestimonials = (lang: Language = 'id') => {
   if (lang === 'en') {
     return [
       {
-        quote: 'The National Coordination Meeting at IICC was executed with remarkable precision. Direct access from the Baranangsiang toll gate made travel effortless for all delegates, the sound system was crystal clear, and the catering was exceptional.',
+        quote: 'Our National Coordination Meeting at IICC was well organized. Access from the Baranangsiang toll exit was quick, the sound system was clear, and the food was satisfying.',
         author: 'H. Sudirman, M.Si.',
-        role: 'Chairman of National Committee',
-        institution: 'Ministry & State Institution RI',
+        role: 'Chair of the National Coordination Meeting Organizing Committee',
+        institution: 'Indonesian Government Institution',
         event: 'National Coordination Meeting',
-      },
-      {
-        quote: 'The Grand Ballroom at IICC is truly pillar-less, giving our wedding decoration a breathtaking, expansive presence. Our family and guests felt extraordinarily comfortable thanks to direct connections to the hotel and mall.',
-        author: 'dr. Sarah & Rayhan, S.T.',
-        role: 'Grand Ballroom Wedding Couple',
-        institution: 'Wedding Client',
-        event: 'Grand Ballroom Reception',
-      },
-      {
-        quote: 'We hosted a multi-day international industry summit. The IICC operations team was remarkably proactive with technical support, LED wall configuration, and hybrid streaming stability.',
-        author: 'Ir. Hendra Kusuma',
-        role: 'Head of Corporate Communications',
-        institution: 'Energy State-Owned Enterprise',
-        event: 'Annual Leadership Summit',
       },
     ];
   }
   return [
     {
-      quote: 'Penyelenggaraan Rapat Koordinasi Nasional di IICC berjalan sangat tertib dan presisi. Akses dari gerbang tol Baranangsiang sangat cepat, sound system jernih, dan katering memuaskan.',
+      quote: 'Rapat Koordinasi Nasional kami di IICC berlangsung sangat terorganisir. Akses dari pintu keluar tol Baranangsiang cepat, tata suara jernih, dan makanannya memuaskan.',
       author: 'H. Sudirman, M.Si.',
-      role: 'Ketua Panitia Rakornas',
-      institution: 'Kementerian Lembaga RI',
-      event: 'Rakornas Nasional',
-    },
-    {
-      quote: 'Grand Ballroom IICC benar-benar tanpa tiang, dekorasi wedding kami terlihat sangat megah dan lapang. Keluarga besar serta tamu undangan sangat nyaman karena langsung terhubung mall dan hotel.',
-      author: 'dr. Sarah & Rayhan, S.T.',
-      role: 'Pengantin Resepsi Grand Ballroom',
-      institution: 'Wedding Client',
-      event: 'Resepsi Grand Ballroom',
-    },
-    {
-      quote: 'Kami mengadakan seminar industri selama beberapa hari berturut-turut. Tim operasional IICC sangat tanggap terhadap kebutuhan teknis LED wall dan hybrid streaming internasional.',
-      author: 'Ir. Hendra Kusuma',
-      role: 'Head of Corporate Communications',
-      institution: 'BUMN Energi',
-      event: 'Annual Leadership Summit',
+      role: 'Ketua Panitia Rapat Koordinasi Nasional',
+      institution: 'Lembaga Pemerintah Republik Indonesia',
+      event: 'Rapat Koordinasi Nasional',
     },
   ];
 };
@@ -369,39 +333,39 @@ export const getFaqs = (lang: Language = 'id') => {
   if (lang === 'en') {
     return [
       {
-        question: 'How accessible is IICC from Jakarta and international airports?',
-        answer: 'IICC is strategically situated on the 2nd floor of Botani Square Mall, directly facing the iconic Tugu Kujang landmark of Bogor City. From the Jagorawi toll road, take the Baranangsiang exit for direct access. An express DAMRI airport bus shuttle is also stationed within Botani Square.',
+        question: 'How do I get to IICC from Jakarta and nearby areas?',
+        answer: 'IICC is on the 2nd floor of Botani Square Mall, across from Tugu Kujang in Bogor. From the Jagorawi Toll Road, take the Baranangsiang exit. The DAMRI airport bus stop is also located in the Botani Square area.',
       },
       {
-        question: 'Is IICC directly integrated with hotel accommodations?',
-        answer: 'Yes, IICC features a direct indoor covered walkway connecting to IPB Convention Hotel and Hotel Santika Bogor inside Botani Square, offering utmost convenience for VVIP speakers, organizers, and out-of-town guests.',
+        question: 'Is IICC connected to a hotel?',
+        answer: 'Yes. IICC has indoor access to IPB Convention Hotel and Hotel Santika Bogor within the Botani Square complex, making it convenient for speakers, organizers, and out-of-town guests.',
       },
       {
-        question: 'What is the maximum guest capacity of the Grand Ballroom?',
-        answer: 'The pillar-less Grand Ballroom comfortably accommodates large-scale events for standing receptions, theater setups for commencements/symposia, and grand banquet round-table dinners with unobstructed sightlines throughout.',
+        question: 'What is the maximum capacity of the IICC Grand Ballroom?',
+        answer: 'The Grand Ballroom can accommodate large events, with standing, theater-style, or round-table seating. Its pillar-free design gives guests a clear view.',
       },
       {
-        question: 'How do I schedule a site survey or book an event date?',
-        answer: 'You can complete the consultation form on this website to connect directly with the official IICC sales team via WhatsApp at +62 811 1330 659 or call +62 251 8400 659. Our venue consultants are ready to assist with custom proposals.',
+        question: 'How can I book a date or arrange a venue visit?',
+        answer: 'Fill out the inquiry form on this website to contact IICC via WhatsApp at 0811 1330 659, or call 0251 8400 659. Our sales team can help arrange a venue visit and provide a quotation.',
       },
     ];
   }
   return [
     {
-      question: 'Bagaimana aksesibilitas lokasi IICC dari Jakarta dan sekitarnya?',
-      answer: 'IICC berlokasi sangat strategis di Lantai Mall Botani Square, tepat di depan ikon Tugu Kujang Kota Bogor. Dari Tol Jagorawi, cukup keluar di gerbang Tol Baranangsiang dengan akses langsung. Tersedia pula shelter bus bandara DAMRI langsung di area Botani Square.',
+      question: 'Bagaimana cara menuju IICC dari Jakarta dan wilayah sekitarnya?',
+      answer: 'IICC berada di lantai 2 Botani Square Mall, tepat di seberang Tugu Kujang di Kota Bogor. Dari Tol Jagorawi, ambil pintu keluar Baranangsiang. Shelter bus bandara DAMRI juga berada langsung di kawasan Botani Square.',
     },
     {
-      question: 'Apakah IICC terintegrasi langsung dengan akomodasi hotel penginapan?',
-      answer: 'Ya, IICC terhubung secara langsung (indoor connecting corridor) dengan IPB Convention Hotel dan Hotel Santika Bogor di kawasan Botani Square, memberikan kenyamanan maksimal bagi para pembicara VVIP, panitia, maupun tamu luar kota.',
+      question: 'Apakah IICC terhubung langsung dengan hotel?',
+      answer: 'Ya. IICC memiliki akses koridor indoor langsung ke IPB Convention Hotel dan Hotel Santika Bogor di kawasan Botani Square, memudahkan mobilitas pembicara, panitia, maupun tamu luar kota.',
     },
     {
       question: 'Berapa kapasitas maksimal Grand Ballroom IICC?',
-      answer: 'Grand Ballroom IICC mampu menampung kapasitas besar dalam format standing reception atau theater-style untuk wisuda/seminar, serta format round-table banquet dinner megah tanpa halangan pilar.',
+      answer: 'Grand Ballroom mampu mengakomodasi acara skala besar dengan format standing reception, theater-style, maupun meja bundar. Desainnya yang tanpa tiang memberikan pandangan bebas hambatan bagi seluruh tamu.',
     },
     {
-      question: 'Bagaimana cara melakukan reservasi tanggal dan survei lokasi?',
-      answer: 'Anda dapat langsung mengisi formulir konsultasi di website ini untuk terhubung via WhatsApp resmi IICC di 0811 1330 659 atau menelepon 0251 8400 659. Tim sales consultant kami siap mendampingi survei lokasi dan menyediakan proposal penawaran khusus.',
+      question: 'Bagaimana cara memesan tanggal atau menjadwalkan kunjungan lokasi?',
+      answer: 'Silakan isi formulir konsultasi di website ini untuk menghubungi tim IICC melalui WhatsApp di 0811 1330 659, atau telepon 0251 8400 659. Tim sales kami siap membantu mengatur kunjungan dan memberikan penawaran resmi.',
     },
   ];
 };
@@ -412,7 +376,7 @@ export const CONTACT_INFO = {
   email: 'sm@ipbicc.com',
   whatsapp: '0811 1330 659',
   whatsappLink: 'https://wa.me/628111330659',
-  address: 'Botani Square Mall Lt.2, Jl. Pajajaran, Bogor Tengah 16127 (Depan Tugu Kujang)',
+  address: 'Botani Square Mall, 2nd Floor, Jl. Pajajaran, Central Bogor (Across from Tugu Kujang)',
 };
 
 // Default exports for backwards compatibility

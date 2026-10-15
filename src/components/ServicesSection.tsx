@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { getServices } from '../data/iiccData';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../i18n/translations';
-import { Check, ArrowUpRight, ChevronDown } from 'lucide-react';
+import { Check, ArrowUpRight, ChevronDown, MessageSquare } from 'lucide-react';
 
 interface ServicesSectionProps {
   onSelectService: (serviceName: string) => void;
@@ -31,11 +31,6 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#B89753] mb-3">
-            <span>{t.eyebrow}</span>
-            <span aria-hidden="true">·</span>
-            <span className="text-[#2C4A3E]">{t.eyebrowSub}</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#1A1E24] text-balance">
             {t.title}
           </h2>
@@ -71,13 +66,6 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-transparent" />
-                  
-                  {/* Subtle badge on photo */}
-                  <div className="absolute top-4 right-4">
-                    <span className="text-[11px] font-semibold text-white bg-black/50 px-2.5 py-1 rounded backdrop-blur-sm border border-white/20">
-                      {service.badge}
-                    </span>
-                  </div>
                 </div>
 
                 {/* Service Card Dropdown Body */}
@@ -116,7 +104,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                         </p>
 
                         {/* Features checklist */}
-                        <ul className="space-y-2.5 mb-6">
+                        <ul className="space-y-2.5">
                           {service.features.map((feat, idx) => (
                             <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-stone-700">
                               <Check className="w-4 h-4 text-[#2C4A3E] shrink-0 mt-0.5" />
@@ -124,22 +112,6 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                             </li>
                           ))}
                         </ul>
-
-                        {/* Action CTA Button inside dropdown */}
-                        <div className="pt-2">
-                          <button
-                            type="button"
-                            onClick={() => onSelectService(service.title)}
-                            className="w-full inline-flex items-center justify-between py-3 px-4 text-xs font-semibold uppercase tracking-wider text-stone-800 bg-[#FAF8F5] hover:bg-[#1A1E24] hover:text-white border border-stone-200 hover:border-[#1A1E24] rounded-lg transition-all shadow-sm"
-                          >
-                            <span>
-                              {language === 'en' 
-                                ? `Inquire ${service.title}` 
-                                : `Konsultasi Paket ${service.title}`}
-                            </span>
-                            <ArrowUpRight className="w-4 h-4 text-[#B89753]" />
-                          </button>
-                        </div>
                       </div>
                     )}
                   </div>
@@ -148,6 +120,21 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
               </div>
             );
           })}
+        </div>
+
+        {/* Centered Large Master CTA Button */}
+        <div className="mt-12 sm:mt-16 flex flex-col items-center justify-center text-center">
+          <button
+            type="button"
+            onClick={() => onSelectService(language === 'en' ? 'Event Package Consultation' : 'Konsultasi Paket Acara')}
+            className="w-full sm:w-auto min-w-[280px] sm:min-w-[420px] md:min-w-[500px] inline-flex items-center justify-center gap-3.5 py-4 sm:py-4.5 px-8 sm:px-12 text-sm sm:text-base font-bold uppercase tracking-wider text-white bg-[#1A1E24] hover:bg-[#B89753] active:bg-[#A38139] rounded-xl transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-[#B89753]/20 hover:-translate-y-0.5 group focus:outline-none focus:ring-2 focus:ring-[#B89753] focus:ring-offset-2"
+          >
+            <MessageSquare className="w-5 h-5 fill-white text-white transition-transform group-hover:scale-110" />
+            <span className="tracking-widest">
+              {language === 'en' ? 'EVENT PACKAGE CONSULTATION' : 'KONSULTASI PAKET ACARA'}
+            </span>
+            <ArrowUpRight className="w-5 h-5 text-[#B89753] group-hover:text-white transition-colors" />
+          </button>
         </div>
 
       </div>

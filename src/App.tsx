@@ -52,25 +52,25 @@ function AppContent() {
       {/* Main Content Sections */}
       <main className="flex-1">
         
-        {/* 2. Hero Section */}
+        {/* 1. Hero Section */}
         <Hero onOpenBooking={scrollToContact} />
 
-        {/* 3. Marquee Strip */}
+        {/* 2. Marquee Strip */}
         <MarqueeStrip />
 
-        {/* 4. Tentang Kami (About) */}
-        <AboutSection />
-
-        {/* 5. Fasilitas Unggulan (Products) */}
-        <FacilitiesSection onSelectFacility={handleSelectFacility} />
-
-        {/* 6. One Stop Solution (Layanan) */}
-        <ServicesSection onSelectService={handleSelectService} />
-
-        {/* 7. Klien Terpercaya (Clients) */}
+        {/* 3. Our Clients Section */}
         <ClientsSection />
 
-        {/* 8. CTA Band & Contact Form */}
+        {/* 4. Tipe Acara (Services) */}
+        <ServicesSection onSelectService={handleSelectService} />
+
+        {/* 5. Tipe Ruangan (Facilities) */}
+        <FacilitiesSection onSelectFacility={handleSelectFacility} />
+
+        {/* 6. Tentang IICC (About) */}
+        <AboutSection />
+
+        {/* 7. Kontak & Informasi */}
         <BookingFormSection 
           initialFacility={selectedFacilityForForm} 
           initialService={selectedServiceForForm} 
